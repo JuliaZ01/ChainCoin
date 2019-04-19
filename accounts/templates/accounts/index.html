@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <title>我的账户</title>
+    <style>
+        body{
+    background-image:url("/static/sky.jpg");
+    background-position: center 0;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    }
+        p.center
+        {
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size:3em;
+        }
+        button.btn-default{
+            background-color: rgba(0,0,0,0.1);
+            font-size:0.5em;
+            color:white;
+        }
+        button.btn-default:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        a.dao:link {color:white;}    /* 未被访问的链接 */
+        a.dao:visited {color:white;} /* 已被访问的链接 */
+        a.dao:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
+        a.dao:active {color:darkblue;}  /* 正在被点击的链接 */
+        div.zhongxin{
+             background-color:  rgba(255,255,255,0.75);
+            width: 1200px;
+            padding: 25px;
+            margin: 75px;
+
+
+        }
+    </style>
+    <script>
+        function test()
+        {
+            window.open("/logout");
+        }
+    </script>
+</head>
+<body>
+{% extends 'Base.html' %}
+{% block content%}
+<div class="zhongxin">我的账户<br>
+    余额：{{ coins }}<br>
+
+    我的捐赠记录：
+    {% if bill_list %}
+    <table class="table">
+   <thead>
+      <tr>
+         <th>项目</th>
+         <th>捐赠金额</th>
+      </tr>
+   </thead>
+   <tbody>
+     {% for investbill in bill_list %}
+      <tr>
+          <td>{{ investbill.iv_to.pjts_name }}</td>
+          <td>{{ investbill.iv_coins }}</td>
+      </tr>
+      {% endfor %}
+   </tbody>
+</table><br>
+   {% else %}
+      此项暂无<br>
+   {% endif %}
+
+    我的项目:
+    {% if my_project and my_project.pjts_bool %}
+    <a href="{% url 'projects:detail' my_project.id %}">{{ my_project.pjts_name }}</a>
+    {% else %}
+    此项暂无
+    {% endif %}
+<br>
+
+    帮助过我的人：
+    {% if helper_list %}
+    <table class="table">
+   <thead>
+      <tr>
+         <th>用户名</th>
+         <th>附言</th>
+      </tr>
+   </thead>
+    <br>
+   <tbody>
+          {% for investbill in helper_list %}
+      <tr>
+          <td>{{ investbill.iv_from }}</td>
+          <td>{{ investbill.iv_ps }}</td>
+      </tr>
+           {% endfor %}
+   </tbody>
+</table>
+<br>
+    {% else %}
+    此项暂无<br>
+    {% endif %}
+
+{% if my_project %}
+    <button type="button" class="btn btn-info navbar-btn" style="height:35px;font-size:1em"><a class="dao" href="{% url 'accounts:settle' %}">结算我的项目 </a></button>
+{% else %}
+{% endif %}
+</div>
+{% endblock %}
+</body>
+</html>

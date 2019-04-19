@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start your projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <title>提示信息</title>
+    <style>
+        body{
+    background-image:url("/static/sky.jpg");
+    background-position: center 0;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    }
+        p.center
+        {
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size:3em;
+        }
+        button.btn-default{
+            background-color: rgba(0,0,0,0.1);
+            font-size:0.5em;
+            color:white;
+        }
+        button.btn-default:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        a:link {color:white;}    /* 未被访问的链接 */
+        a:visited {color:white;} /* 已被访问的链接 */
+        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
+        a:active {color:darkblue;}  /* 正在被点击的链接 */
+        div.zhongxin{
+             background-color:  rgba(255,255,255,0.75);
+            width: 1200px;
+            padding: 25px;
+            margin: 75px;
+        }
+    </style>
+    <script>
+        function test()
+        {
+            window.open("/logout");
+        }
+    </script>
+</head>
+<body>
+{% extends 'Base.html' %}
+{% block content%}
+<div class="zhongxin"style="padding:100px;font-size:1.5em;text-align:center;">
+{{ msg }}
+</div>
+{% endblock %}
+
+</body>
+</html>

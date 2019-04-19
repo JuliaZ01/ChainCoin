@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跟投</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start your projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <title>login</title>
+    <style>
+        body{
+    background-image:url("/static/sky.jpg");
+    background-position: center 0;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    }
+        p.center
+        {
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size:3em;
+        }
+        button.btn-default.now{
+            background-color: rgba(0,0,0,0.1);
+            font-size:0.5em;
+            color:white;
+        }
+        button.btn-default.now:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        a:link {color:white;}    /* 未被访问的链接 */
+        a:visited {color:white;} /* 已被访问的链接 */
+        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
+        a:active {color:darkblue;}  /* 正在被点击的链接 */
+    </style>
+    <script>
+        function test()
+        {
+            window.open("/logout");
+        }
+    </script>
+</head>
+<body>
+{% extends 'Base.html' %}
+{% block content%}
+<div style="background-color:  rgba(255,255,255,0.75);width: 1200px;padding: 25px;margin: 75px;">
+    感谢您的帮助！众人拾柴火焰高！
+    <form role="form" style="margin-top:10px;margin-bottom: 10px" method="post" action="{% url 'invest:start' %}">
+        <div class="form-group">
+            <label for="name">帮助金额</label>
+            <input type="text" class="form-control" style="width:50px" id="coins" name="coins">
+        </div>
+        <div class="form-group">
+            <label for="name">附言</label>
+            <textarea type="text" class="form-control"   id="ps" name="ps" style="height: 100px;"></textarea>
+        </div>
+         <input type="submit" onclick="alert('{{ msg }}');" class="btn btn-default now" style="background-color: rgba(255,255,255,1);height:35px;width:55px;"value="提交" >
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>
+
+
+</body>
+</html>

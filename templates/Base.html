@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'index:index' %}" >拾柴筹</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+             <li class="active"><a href="{% url 'index:index' %} ">首页</a> </li>
+             <li class="active"><a href="{% url 'projects:show' %}">更多项目</a></li>
+             <li class="active"><a href="{% url 'index:aboutus' %}">关于我们</a> </li>
+            </ul>
+        </div>
+        <div>
+            {% if request.session.is_login %}
+                <div class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'accounts:index' %}"><span class="glyphicon glyphicon-user"></span> 欢迎您，用户{{ request.session.username }}</a></li>
+                    <button type="button" class="btn btn-info navbar-btn" style="height:35px;width:55px;font-size:1em"><a href="{% url 'login:logout' %}">注销 </a></button>
+                </div>
+            {% else %}
+                <div>
+                    <form class="navbar-form navbar-right" action="{% url 'login:login' %}" method="post">
+                        <div class="form-group">
+                            <input type="text" name="un" id="un" placeholder=" 手机号">
+                            <input type="password" name="up" id="up" placeholder=" 密码">
+                        </div>
+                        <input type="submit" class="btn btn-default" style="background-color: rgba(0,0,0,0.1);color:white;height:35px;width:55px;"value="登录" >
+                        <button type="submit" class="btn btn-default" style="height:35px;width:55px;font-size:1em";><a href="{% url 'login:register' %}">注册</a></button>
+                     </form>
+                 </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+    {% block content%}
+
+    {% endblock %}
+</body>
+</html>
