@@ -6,10 +6,9 @@ const options = {
   host: '127.0.0.1:36002',
 };
 const sdk = new BumoSDK(options);
-const genesisaddress = 'buQf5VAcYgWhJTp9Fywpu7W9KWfnUTK55MHt';
-const genesispk = 'privbyrGtc3YaTLf4iWPU68Dwx83j8jjLvsoqAS3zbjVX5BcDvP7uYhE';
-const caddress = 'buQitDF6pdcyNfPRpuAocuYWudqBxMSqcRir';
-const CreateProject = async function(){
+const settleContract = async function(cad){
+  const genesisaddress = 'buQf5VAcYgWhJTp9Fywpu7W9KWfnUTK55MHt';
+  const genesispk = 'privbyrGtc3YaTLf4iWPU68Dwx83j8jjLvsoqAS3zbjVX5BcDvP7uYhE';
 //获取Nonce
   const nonceInfo = await sdk.account.getNonce(genesisaddress)
   if(nonceInfo.errorCode != 0){
@@ -23,7 +22,7 @@ const CreateProject = async function(){
         method: 'settle',
    }
    const operationInfo = await sdk.operation.contractInvokeByBUOperation({
-       contractAddress: caddress,
+       contractAddress: cad,
        input: JSON.stringify(initInput),
    });
    if(operationInfo.errorCode != 0){
@@ -61,12 +60,12 @@ const CreateProject = async function(){
    });
    return submitInfo;
 };
-CreateProject().then(result =>{
-  console.log(result);
-  return result;
-})
-.catch(err =>{
-  console.log(err);
-});
+// CreateProject().then(result =>{
+//   console.log(result);
+//   return result;
+// })
+// .catch(err =>{
+//   console.log(err);
+// });
 
-module.exports.CreateProject = CreateProject;
+module.exports.settleContract = settleContract;
