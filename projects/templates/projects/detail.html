@@ -54,12 +54,6 @@
         a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
         a:active {color:darkblue;}  /* 正在被点击的链接 */
     </style>
-    <script>
-        function test()
-        {
-            window.open("/logout");
-        }
-    </script>
 </head>
 <body>
 {% extends 'Base.html' %}
@@ -71,7 +65,12 @@
     项目目标筹款额：{{ projects.pjts_coins }}<br>
     现在已有的币数：{{ projects.pjts_nowcoins }}<br>
     开始日期： {{ projects.pjts_time|date:"Y-m-d H:i:s" }}<br>
-<button type="button" class="btn btn-info navbar-btn" style="font-size:1em"><a href="{% url 'invest:invest' projects.id %}">帮助他们 </a></button>
+    {% if project.pjts_now %}
+        <button type="button" class="btn btn-info navbar-btn" style="font-size:1em"><a href="{% url 'invest:invest' projects.id %}">帮助他们 </a></button>
+    {% else %}
+        此项目已经结束
+    {% endif %}
+
 </div>
 {% endblock %}
 </body>
