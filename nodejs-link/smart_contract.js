@@ -28,7 +28,6 @@ function settle(){
 	if (int64Compare(storageLoad(globalAttribute.user), '0') === 0){
         let amount = globalAttribute.goal * 100000000;
 		Chain.payCoin(globalAttribute.user, amount.toString());
-		globalAttribute.now = false;
 		storageStore(globalAttributeKey, JSON.stringify(globalAttribute));
 		return true;
 	}
