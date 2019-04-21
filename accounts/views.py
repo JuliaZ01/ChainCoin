@@ -61,8 +61,15 @@ def settle(request):
     p = projects.objects.get(pjts_users = U)
     a = account.objects.get(ac_users = U)
     msg = {}
-    if p.pjts_now == True:
+    if p.pjts_now == True and p.pjts_nowcoins != p.pjts_coins:
         msg['msg'] = "您的项目未到达截止时间"
+    elif p.pjts_nowcoins == p.pjts_coins:
+        info = c.settleContract(p.pjts_address)
+        msg['msg'] = "恭喜您筹到目标金额,钱已汇入您账上"
+        p.pjts_now = False
+        a.ac_coins += p.pjts_coins
+        p.save()
+        a.save()
     elif p.pjts_nowcoins == p.pjts_coins:
         info = c.settleContract(p.pjts_address)
         msg['msg'] = "恭喜您筹到目标金额,钱已汇入您账上"
