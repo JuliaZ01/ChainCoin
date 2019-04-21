@@ -15,10 +15,25 @@ c.connect("tcp://127.0.0.1:4343")
 # pbkey = kp[36:112]
 # prkey = kp[112:]
 
-hash1 = c.createproject(user, coins, prkey)
-print(hash1)
-time.sleep(15)
-if type(hash1)== type('abc'):
-	result = c.getcontractad(hash1)
-	print(result)
+# hash1 = c.createproject(user, coins, prkey)
+# print(hash1)
+# time.sleep(15)
+# if type(hash1)== type('abc'):
+# 	result = c.getcontractad(hash1)
+# 	print(result)
 
+# ad = 'buQgTbz6V9XUvcJ1iRSH9bwCBL7REQQb6fK4'
+# pr = 'privby54uXkXxCv91Z6YP1Ax6b26EhsMeY2s2CzzbutP2RrwgpqeeckA'
+# hash1 = c.settleweight(ad, pr)
+# print(hash1)
+
+#invest
+user = 'buQgTbz6V9XUvcJ1iRSH9bwCBL7REQQb6fK4'
+pr = 'privby54uXkXxCv91Z6YP1Ax6b26EhsMeY2s2CzzbutP2RrwgpqeeckA'
+cad = 'buQeWwePKNvJb34RETBFnGr7yNbxfJ6Zauu7'
+hash1 = c.investproject(user, pr, cad, 3)
+print(hash1)
+#settle
+# cad = 'buQeWwePKNvJb34RETBFnGr7yNbxfJ6Zauu7'
+# hash1 = c.settleContract(cad)
+# print(hash1)
