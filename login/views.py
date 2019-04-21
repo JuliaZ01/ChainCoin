@@ -42,7 +42,9 @@ def register(request):
             address = kp[0:36]
             pbkey = kp[36:112]
             prkey = kp[112:]
-            U = Users(phone_number = request.POST['phone_number'],user_password = request.POST['user_password'],address=address, public_key=pbkey, private_key = prkey)
+            # U = Users(phone_number = request.POST['phone_number'],user_password = request.POST['user_password'])
+            U = Users(phone_number=request.POST['phone_number'], user_password=request.POST['user_password'],
+                      address=address, public_key=pbkey, private_key=prkey)
             U.save()
             A = account(ac_coins=50, ac_users=U)
             A.save()
