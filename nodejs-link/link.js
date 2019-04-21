@@ -26,7 +26,17 @@ var server = new zerorpc.Server({
 			reply(null, result);
 		});
 
-    }
+    },
+    createproject: function(user, coins, prkey, reply){
+		let hash = createProject.CreateProject(user, coins, prkey);
+		hash.then(result=>{
+			console.log(result);
+			reply(null, result);
+		});
+	},
+	hello: function(hash, reply){
+       reply("hello");
+    },
 
 
 });
