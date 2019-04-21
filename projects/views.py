@@ -43,13 +43,13 @@ def start(request):
             try:
                 U = Users.objects.get(phone_number=request.session['username'])
             except KeyError:
-                return render(request, 'projects/start.html', {'msg': "用户未登录，请登录后再进行操作"})
+                return render(request, 'index/message.html', {'msg': "用户未登录，请登录后再进行操作"})
             else:
                 try:
                     p = projects(pjts_name = request.POST['name'],pjts_detail = request.POST['detail'],
                                  pjts_coins = int(request.POST['coins']),pjts_users = U)
                 except ValueError:
-                    return render(request, 'projects/start.html', {'msg': "信息未填写或者格式错误"})
+                    return render(request, 'index/message.html', {'msg': "信息未填写或者格式错误"})
                 else:
                     users = U.address
                     prkey = U.private_key
