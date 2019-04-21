@@ -4,6 +4,23 @@ from .models import Users,account
 from django.contrib.auth import authenticate
 import redis
 import zerorpc
+from apscheduler.schedulers.background import BackgroundScheduler
+from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
+
+scheduler3 = BackgroundScheduler()
+scheduler3.add_jobstore(DjangoJobStore(), "default")
+@register_job(scheduler3, 'interval', seconds=60, id='task_time3')
+def job3():
+    for U in Users.objects.all():
+        if U.bool == False:
+            c = zerorpc.Client()
+            c.connect("tcp://127.0.0.1:4343")
+            result = c.settleweight(U.address, U.private_key)
+            if type(result) == type('abc'):
+                U.bool = True
+                U.save()
+register_events(scheduler3)
+scheduler3.start()
 
 def login(request):
     if request.method == 'POST':
