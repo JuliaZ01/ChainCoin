@@ -40,7 +40,7 @@ def start(request):
             i = investbill(iv_coins=coins, iv_from=U, iv_to=p,iv_ps=ps)
             p.pjts_nowcoins += coins
             if p.pjts_nowcoins > p.pjts_coins:
-                 context = {'msg': "您捐赠的金额已经超过项目所需资金"}
+                context = {'msg': "您捐赠的金额已经超过项目所需资金"}
             elif coins > a.ac_coins:
                 context = {'msg': "余额不足。"}
             elif projects.pjts_now == False:
