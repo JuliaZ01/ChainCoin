@@ -41,10 +41,10 @@
         button.btn-default:hover{
             background-color: rgba(0,0,0,0.1);
         }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
+        a.now:link {color:black;}    /* 未被访问的链接 */
+        a.now:visited {color:black;} /* 已被访问的链接 */
+        a.now:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
+        a.now:active {color:darkblue;}  /* 正在被点击的链接 */
         div.zhongxin{
              background-color:  rgba(255,255,255,0.75);
             width: 1200px;
@@ -68,7 +68,7 @@
 
     {% for projects in latest_projects_list %}
         {% if projects.pjts_bool %}
-        <a style="font-size: 1.3em" href="{% url 'projects:detail' projects.id %}">{{ projects.pjts_name }}</a><br>
+        <a class="now" style="font-size: 1.3em" href="{% url 'projects:detail' projects.id %}">{{ projects.pjts_name }}</a><br>
         {% else %}
         {% endif %}
     {% endfor %}
