@@ -2,6 +2,9 @@ var redis = require('redis');
 var createAccount = require('./create_account.js')
 var createProject = require('./create_project.js')
 var getContractAd = require('./get_contract_ad.js')
+var settleWeight = require('./settle_weight.js')
+var investContract = require('./invest_contract.js')
+var settleContract = require('./settle_contract.js')
 var zerorpc = require("zerorpc");
 var sub = redis.createClient();
 var server = new zerorpc.Server({
@@ -10,6 +13,13 @@ var server = new zerorpc.Server({
 		keypair.then(result=>{
 			console.log(result);
 			reply(null, result.address +  result.pbkey + result.prkey);	
+		});
+	},
+	settleweight: function(ad, pr,reply){
+		let info = settleWeight.settleWeight(ad,pr);
+		info.then(result=>{
+			console.log(result);
+			reply(null, result.result.hash);
 		});
 	},
 	createproject: function(user, coins, prkey, reply){
@@ -34,11 +44,23 @@ var server = new zerorpc.Server({
 			reply(null, result);
 		});
 	},
+	investproject: function(user, pr, cad, coin, reply){
+		let hash = investContract.investContract(user, pr, cad, coin);
+		hash.then(result=>{
+			console.log(result);
+			reply(null, result.result.hash);
+		});
+	},
+	settleContract: function(cad, reply){
+		let hash = settleContract.settleContract(cad);
+		hash.then(result=>{
+			console.log(result);
+			reply(null, result);
+		});
+	},
 	hello: function(hash, reply){
        reply("hello");
     },
-
-
 });
 server.bind("tcp://127.0.0.1:4343")
 
