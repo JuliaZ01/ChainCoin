@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from projects.models import projects
 from login.models import Users,account
 from .models import investbill
+import zerorpc
 # Create your views here.
 global ProjectId
 def invest(request,projects_id):
@@ -44,10 +45,18 @@ def start(request):
                 context = {'msg': "余额不足。"}
             elif projects.pjts_now == False:
                 context = {'msg': "本项目无效。"}
+            elif U.bool == False:
+                context = {'msg': "您的用户刚注册，请稍后再投资"}
             else:
-                a.ac_coins -= coins
-                p.save()
-                i.save()
-                a.save()
-                context = {'msg': "捐赠成功，感谢您的慷慨"}
+                c = zerorpc.Client()
+                c.connect("tcp://127.0.0.1:4343")
+                info = c.investproject(U.address, U.private_key, p.pjts_address, coins)
+                if type(info) != type('abc'):
+                    context = {'msg': "捐款失败，请联系管理员。"}
+                else:
+                    a.ac_coins -= coins
+                    p.save()
+                    i.save()
+                    a.save()
+                    context = {'msg': "捐赠成功，感谢您的慷慨"}
         return  render(request,'index/message.html',context)
