@@ -5,6 +5,9 @@ from projects.models import projects
 from django.http import HttpResponse
 from django.utils import timezone
 from datetime import datetime,timedelta
+import redis
+import zerorpc
+import time
 # Create your views here.
 def index(request):
         U = Users.objects.get(phone_number = request.session['username'])
@@ -52,6 +55,8 @@ def index(request):
 
 
 def settle(request):
+    c = zerorpc.Client()
+    c.connect("tcp://127.0.0.1:4343")
     U = Users.objects.get(phone_number = request.session['username'])
     p = projects.objects.get(pjts_users = U)
     a = account.objects.get(ac_users = U)
@@ -59,12 +64,14 @@ def settle(request):
     if p.pjts_now == True:
         msg['msg'] = "您的项目未到达截止时间"
     elif p.pjts_nowcoins == p.pjts_coins:
+        info = c.settleContract(p.pjts_address)
         msg['msg'] = "恭喜您筹到目标金额,钱已汇入您账上"
         p.pjts_now = False
         a.ac_coins += p.pjts_coins
         p.save()
         a.save()
     else:
+        info = c.settleContract(p.pjts_address)
         msg['msg'] = "很遗憾，您的项目失败"
         for i in investbill.objects.filter(iv_to=p):
             helper = i.iv_from
