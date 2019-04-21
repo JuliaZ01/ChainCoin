@@ -6,15 +6,9 @@ const options = {
   host: '127.0.0.1:36002',
 };
 const sdk = new BumoSDK(options);
-// const genesisaddress = 'buQf5VAcYgWhJTp9Fywpu7W9KWfnUTK55MHt'
-// const genesispk = 'privbyrGtc3YaTLf4iWPU68Dwx83j8jjLvsoqAS3zbjVX5BcDvP7uYhE'
-const genesisaddress = 'buQdeWbo6RTfj6bA8BTsCL9ZSSP694KY5S1Q';
-const genesispk = 'privbxhkpQ1fW2DEF8uaEstH9mp47Qw3ijTWGm75ZtTAv4kdtkyh63kN';
-const caddress = 'buQhFy7RXasD4uv7YdXzT3erpQCTPwefMCAA';
-
-const CreateProject = async function(){
+const settleWeight = async function(ad,pr){
 //获取Nonce
-	const nonceInfo = await sdk.account.getNonce(genesisaddress)
+	const nonceInfo = await sdk.account.getNonce(ad)
 	if(nonceInfo.errorCode != 0){
 		console.log(nonceInfo);
 		return;
@@ -23,7 +17,7 @@ const CreateProject = async function(){
 	nonce = new BigNumber(nonce).plus(1).toString(10);
 //构建操作
    const operationInfo = await sdk.operation.accountSetPrivilegeOperation({
-    sourceAddress: genesisaddress,
+    sourceAddress: ad,
     masterWeight: '100',
     txThreshold: '1',
    });
@@ -34,7 +28,7 @@ const CreateProject = async function(){
    const operation = operationInfo.result.operation;
  //序列化交易
    const buildInfo = await sdk.transaction.buildBlob({
-   	   sourceAddress : genesisaddress,
+   	   sourceAddress : ad,
    	   gasPrice : '1000',
    	   feeLimit : '2001030000',
    	   nonce : nonce,
@@ -47,7 +41,7 @@ const CreateProject = async function(){
    const blob = buildInfo.result.transactionBlob;
 //用私钥进行签名
     const signatureInfo = sdk.transaction.sign({
-    privateKeys : [ genesispk ],
+    privateKeys : [ pr ],
     blob : blob,
   });
    if (signatureInfo.errorCode != 0){
@@ -62,12 +56,12 @@ const CreateProject = async function(){
    });
    return submitInfo;
 };
-CreateProject().then(result =>{
-  console.log(result);
-  return result;
-})
-.catch(err =>{
-  console.log(err);
-});
+// settleWeight(ad,pr).then(result =>{
+//   console.log(result);
+//   return result;
+// })
+// .catch(err =>{
+//   console.log(err);
+// });
 
-module.exports.CreateProject = CreateProject;
+module.exports.settleWeight = settleWeight;
