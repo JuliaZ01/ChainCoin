@@ -28,9 +28,11 @@ scheduler2.add_jobstore(DjangoJobStore(), "default")
 def job2():
     for p in projects.objects.all():
         if p.pjts_bool == False:
-            # result = c.getcontractad(p.pjts_hash)
-            # if result != []:
-            #     p.pjts_address = result[0]['contract_address']
+            c = zerorpc.Client()
+            c.connect("tcp://127.0.0.1:4343")
+            result = c.getcontractad(p.pjts_hash)
+            if result != []:
+                p.pjts_address = result[0]['contract_address']
                 p.pjts_bool = True
                 p.save()
 register_events(scheduler2)
@@ -51,18 +53,17 @@ def start(request):
                 else:
                     users = U.address
                     prkey = U.private_key
-                    # c = zerorpc.Client()
-                    # c.connect("tcp://127.0.0.1:4343")
-                    # hash1 = c.createproject(users, int(request.POST['coins']), prkey)
-                    hash1 = 'd7d27196ef98a7606a15c0361144d1c58f30c90fabaf822249386dfb4429a823'
-                    if isinstance(hash1,str):
+                    c = zerorpc.Client()
+                    c.connect("tcp://127.0.0.1:4343")
+                    hash1 = c.createproject(users, int(request.POST['coins']), prkey)
+                    if type(hash1) == type('abc'):
                         p = projects(pjts_name=request.POST['name'], pjts_detail=request.POST['detail'],
                                  pjts_coins=int(request.POST['coins']), pjts_users=U, pjts_hash=hash1,
                                  pjts_address='false')
                         p.save()
                         return render(request, 'index/message.html', {'msg': "已经提交，请稍候在个人账户界面查看项目是否生效"})
                     else:
-                        return render(request, 'index/message.html', {'msg': "提交无效，请联系管理员"})
+                        return render(request, 'index/message.html', {'msg': "提交失败，请联系管理员。"})
     else:
         return render(request,'projects/start.html')
 
