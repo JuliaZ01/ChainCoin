@@ -6,9 +6,9 @@ const options = {
   host: '127.0.0.1:36002',
 };
 const sdk = new BumoSDK(options);
-const user = 'buQf5VAcYgWhJTp9Fywpu7W9KWfnUTK55MHt';
-const prkey = 'privbyrGtc3YaTLf4iWPU68Dwx83j8jjLvsoqAS3zbjVX5BcDvP7uYhE';
-const coins = 4;
+// const user = 'buQYhiGqsUawbz47FW3vtN5zKtMYcgMZcCDn';
+// const prkey = 'privbwj3dpQfkCdCq539prht19JPLpGHs9Er4gK1b5QqTJAaz7X1Jdqy';
+// const coins = 4;
 const CreateProject = async function(user, coins, prkey){
 //获取Nonce
 	const nonceInfo = await sdk.account.getNonce(user)
