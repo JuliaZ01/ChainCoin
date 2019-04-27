@@ -23,5 +23,5 @@ urlpatterns = [
     path('index/',include('index.urls')),
     path('invest/',include('invest.urls')),
     path('accounts/',include('accounts.urls')),
-    path('redistest/',views.redistest, name='redistest'),
+    path('usermana/',include('usermana.urls')),
 ]
