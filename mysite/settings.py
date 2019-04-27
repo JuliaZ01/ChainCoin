@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'invest.apps.InvestConfig',
     'accounts.apps.AccountsConfig',
     'django_apscheduler',
+    'usermana.apps.UsermanaConfig',
 ]
 
 MIDDLEWARE = [
