@@ -1,6 +1,7 @@
 from django.http import HttpResponse,Http404
 from .models import projects
 from login.models import Users
+from usermana.models import Blacklist
 from django.shortcuts import render
 from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
@@ -45,6 +46,8 @@ def start(request):
             except KeyError:
                 return render(request, 'index/message.html', {'msg': "用户未登录，请登录后再进行操作"})
             else:
+                if Blacklist.objects.filter(Bl_user=U):
+                    return render(request, 'index/message.html', {'msg': "您在黑名单中，禁止发起项目"})
                 try:
                     p = projects(pjts_name = request.POST['name'],pjts_detail = request.POST['detail'],
                                  pjts_coins = int(request.POST['coins']),pjts_users = U)

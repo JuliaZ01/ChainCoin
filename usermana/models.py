@@ -4,7 +4,7 @@ from login.models import Users
 class Blacklist(models.Model):
     Bl_user = models.ForeignKey(Users, on_delete = models.CASCADE)
     def __str__(self):
-        return self.Bl_User
+        return self.Bl_user.phone_number
 
 class Volunteer(models.Model):
     Vl_name = models.CharField(max_length = 500)
