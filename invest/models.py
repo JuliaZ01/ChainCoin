@@ -3,7 +3,7 @@ from login.models import Users
 from projects.models import projects
 # Create your models here.
 class investbill(models.Model):
-    iv_coins = models.IntegerField()
+    iv_coins = models.DecimalField(max_digits =28,decimal_places =8)
     iv_from = models.ForeignKey(Users, on_delete = models.CASCADE)
     iv_to = models.ForeignKey(projects, on_delete = models.CASCADE)
     iv_ps = models.CharField(max_length = 500)

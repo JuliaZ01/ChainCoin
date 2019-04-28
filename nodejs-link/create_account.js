@@ -26,7 +26,7 @@ const CreateAccount = async function(){
     let address = createKeyInfo.result.address;
     const operationInfo = await sdk.operation.accountActivateOperation({
     	destAddress : address,
-    	initBalance : '5000000000',
+    	initBalance : '5000250000',
     })
     if(operationInfo.errorCode != 0){
     	console.log(operationInfo);

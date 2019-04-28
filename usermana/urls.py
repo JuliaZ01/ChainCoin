@@ -5,4 +5,5 @@ app_name = 'usermana'
 urlpatterns = [
     path('', views.index, name='index'),
     path('start/', views.start, name='start'),
+    path('scharge/', views.scharge, name='scharge'),
 ]

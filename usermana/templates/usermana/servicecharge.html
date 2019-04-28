@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>start your projects</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>注册</title>
+    <title>手续费</title>
     <style>
         body{
     background-image:url("/static/sky.jpg");
@@ -45,46 +46,32 @@
         a:visited {color:white;} /* 已被访问的链接 */
         a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
         a:active {color:darkblue;}  /* 正在被点击的链接 */
-
+        div.zhongxin{
+             background-color:  rgba(255,255,255,0.75);
+            width: 1200px;
+            padding: 25px;
+            margin: 75px;
+        }
     </style>
     <script>
-function validate() {
-var user_password = document.getElementById("user_password").value;
-var user_password2 = document.getElementById("user_password2").value;
-if(user_password == user_password2) {
-document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
-document.getElementById("submit").disabled = false;
-}
-else {
-document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
-document.getElementById("submit").disabled = true;
-}
-}
+        function test()
+        {
+            window.open("/logout");
+        }
     </script>
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div style="background-color:  rgba(255,255,255,0.75);width: 400px;padding: 25px;margin: 75px auto
-;
-">
-    <form role="form" style="margin-bottom: 10px" action="{% url 'login:register' %}" method="post">
-        <div class="form-group">
-            <label for="name">用户名</label>
-            <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="请输入用户名">
-        </div>
-        <div class="form-group">
-            <label for="name">密码</label>
-            <input type="password" class="form-control" id="user_password" name="user_password" placeholder="请输入您的密码">
-        </div>
-        <div class="form-group">
-            <label for="name">确认密码</label>
-            <input onkeyup="validate()" type="password" class="form-control" id="user_password2" name="user_password2" placeholder="请确认您的密码"><span id="tishi"></span>
-        </div>
-         <input type="submit" class="form-control" style="background-color: cornflowerblue;"value="注册" >
-    </form>
-          我们将自动为您生成区块链地址以及公私钥并为您保管
+<div class="zhongxin">
+<p style="font-size:2.5em; text-align: center" >手续费收取标准</p>
+    <p style="font-size: 1.5em;text-align:left;text-indent: 2em;">手续费分为固定费用和灵活费用。灵活费用随时变化，但少于0.10000000币。</p>
+    <p style="font-size: 1.5em;text-align:left;text-indent: 2em;">创建新项目收取10.00000000币的固定费用，同时收取灵活费用。</p>
+<p style="font-size: 1.5em;text-align:left;text-indent: 2em;">捐款不收取固定费用，只收取灵活费用。</p>
+    <p style="font-size: 1.5em;text-align:left;text-indent: 2em;">结算项目不收取任何费用。</p>
+<p style="font-size: 1.5em;text-align:left;text-indent: 2em;">在平台上任何操作，本平台于次日扣款手续费，届时可以根据账户余额查收手续费收取情况。</p>
 </div>
 {% endblock %}
+
 </body>
 </html>

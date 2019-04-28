@@ -12,7 +12,7 @@ class Users(models.Model):
         return self.phone_number
 
 class account(models.Model):
-    ac_coins = models.IntegerField(default=50)
+    ac_coins = models.DecimalField(default=50.00000000,max_digits =28,decimal_places =8)
     ac_users = models.ForeignKey(Users, on_delete=models.CASCADE)
     def _str_(self):
         return  self.ac_users

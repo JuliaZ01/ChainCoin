@@ -1,6 +1,7 @@
 import redis
 import zerorpc
 import time
+from decimal import *
 # r = redis.StrictRedis(host='localhost', port=6379)
 # r.publish('CreateKeypair', 'createaccount')
 user = 'buQf5VAcYgWhJTp9Fywpu7W9KWfnUTK55MHt'
@@ -38,10 +39,18 @@ c.connect("tcp://127.0.0.1:4343")
 # hash1 = c.settleContract(cad)
 # print(hash1)
 # 
-# addmeta
-ad = 'buQYhiGqsUawbz47FW3vtN5zKtMYcgMZcCDn'
-pr = 'privbwj3dpQfkCdCq539prht19JPLpGHs9Er4gK1b5QqTJAaz7X1Jdqy'
-name = '志愿'
-detail = '养老院'
-hash1 = c.addVolunteer(ad, pr, name, detail)
-print(hash1)
+# # addmeta
+# ad = 'buQYhiGqsUawbz47FW3vtN5zKtMYcgMZcCDn'
+# pr = 'privbwj3dpQfkCdCq539prht19JPLpGHs9Er4gK1b5QqTJAaz7X1Jdqy'
+# name = '志愿'
+# detail = '养老院'
+# hash1 = c.addVolunteer(ad, pr, name, detail)
+# print(hash1)
+# getbalance
+address = 'buQYhiGqsUawbz47FW3vtN5zKtMYcgMZcCDn'
+
+a = c.getBalance(address)
+print (a)
+num = Decimal(a)/100000000
+print (num)
+print (type(num))

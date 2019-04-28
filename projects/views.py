@@ -7,6 +7,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
 from datetime import datetime,timedelta
 from django.utils import timezone
+from decimal import *
 import redis
 import zerorpc
 
@@ -50,7 +51,7 @@ def start(request):
                     return render(request, 'index/message.html', {'msg': "您在黑名单中，禁止发起项目"})
                 try:
                     p = projects(pjts_name = request.POST['name'],pjts_detail = request.POST['detail'],
-                                 pjts_coins = int(request.POST['coins']),pjts_users = U)
+                                 pjts_coins = Decimal(int(request.POST['coins'])),pjts_users = U)
                 except ValueError:
                     return render(request, 'index/message.html', {'msg': "信息未填写或者格式错误"})
                 else:
@@ -72,7 +73,7 @@ def start(request):
 
 
 def show(request):
-    latest_projects_list = projects.objects.order_by('pjts_time')[:5]
+    latest_projects_list = projects.objects.order_by('pjts_time')
     context = {'latest_projects_list':latest_projects_list}
     return render(request,'projects/show.html',context)
 
@@ -80,5 +81,5 @@ def detail(request,projects_id):
     try:
         p = projects.objects.get(pk=projects_id)
     except projects.DoesNotExist:
-        raise Http404("Question does not exist")
+        raise Http404("此项目不存在")
     return render(request, 'projects/detail.html', {'projects': p})

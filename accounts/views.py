@@ -5,9 +5,28 @@ from projects.models import projects
 from django.http import HttpResponse
 from django.utils import timezone
 from datetime import datetime,timedelta
+from apscheduler.schedulers.background import BackgroundScheduler
+from login.models import account,Users
+from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
+from decimal import *
 import redis
 import zerorpc
 import time
+
+scheduler4 = BackgroundScheduler()
+scheduler4.add_jobstore(DjangoJobStore(), "default")
+@register_job(scheduler4, 'cron', hour='23', minute='50',id='task_time4')
+def job4():
+    c = zerorpc.Client()
+    c.connect("tcp://127.0.0.1:4343")
+    for U in Users.objects.all():
+        balance = c.getBalance(U.address)
+        if type(balance) == type('abc'):
+            a = account.objects.get(ac_users=U)
+            a.ac_coins = Decimal(balance)/100000000
+            a.save()
+register_events(scheduler4)
+scheduler4.start()
 # Create your views here.
 def index(request):
         U = Users.objects.get(phone_number = request.session['username'])

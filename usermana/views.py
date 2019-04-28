@@ -48,3 +48,6 @@ def start(request):
                         return render(request, 'index/message.html', {'msg': "提交失败，请联系管理员。"})
     else:
         return render(request,'usermana/start.html')
+
+def scharge(request):
+    return render(request,'usermana/servicecharge.html')

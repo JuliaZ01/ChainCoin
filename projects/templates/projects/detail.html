@@ -65,7 +65,8 @@
     项目目标筹款额：{{ projects.pjts_coins }}<br>
     现在已有的币数：{{ projects.pjts_nowcoins }}<br>
     开始日期： {{ projects.pjts_time|date:"Y-m-d H:i:s" }}<br>
-    {% if project.pjts_now %}
+    项目状态：
+    {% if projects.pjts_now %}
         <button type="button" class="btn btn-info navbar-btn" style="font-size:1em"><a href="{% url 'invest:invest' projects.id %}">帮助他们 </a></button>
     {% else %}
         此项目已经结束
