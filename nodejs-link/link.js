@@ -5,6 +5,7 @@ var getContractAd = require('./get_contract_ad.js')
 var settleWeight = require('./settle_weight.js')
 var investContract = require('./invest_contract.js')
 var settleContract = require('./settle_contract.js')
+var addVolunteer = require('./add_volunteer.js')
 var zerorpc = require("zerorpc");
 var sub = redis.createClient();
 var server = new zerorpc.Server({
@@ -53,6 +54,13 @@ var server = new zerorpc.Server({
 	},
 	settleContract: function(cad, reply){
 		let hash = settleContract.settleContract(cad);
+		hash.then(result=>{
+			console.log(result);
+			reply(null, result);
+		});
+	},
+	addVolunteer: function(ad, pr, name, key, reply){
+		let hash = addVolunteer.settlemetadata(ad, pr, name, key);
 		hash.then(result=>{
 			console.log(result);
 			reply(null, result);

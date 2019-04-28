@@ -28,12 +28,20 @@ c.connect("tcp://127.0.0.1:4343")
 # print(hash1)
 
 #invest
-user = 'buQgTbz6V9XUvcJ1iRSH9bwCBL7REQQb6fK4'
-pr = 'privby54uXkXxCv91Z6YP1Ax6b26EhsMeY2s2CzzbutP2RrwgpqeeckA'
-cad = 'buQeWwePKNvJb34RETBFnGr7yNbxfJ6Zauu7'
-hash1 = c.investproject(user, pr, cad, 3)
-print(hash1)
+# user = 'buQgTbz6V9XUvcJ1iRSH9bwCBL7REQQb6fK4'
+# pr = 'privby54uXkXxCv91Z6YP1Ax6b26EhsMeY2s2CzzbutP2RrwgpqeeckA'
+# cad = 'buQeWwePKNvJb34RETBFnGr7yNbxfJ6Zauu7'
+# hash1 = c.investproject(user, pr, cad, 3)
+# print(hash1)
 #settle
 # cad = 'buQeWwePKNvJb34RETBFnGr7yNbxfJ6Zauu7'
 # hash1 = c.settleContract(cad)
 # print(hash1)
+# 
+# addmeta
+ad = 'buQYhiGqsUawbz47FW3vtN5zKtMYcgMZcCDn'
+pr = 'privbwj3dpQfkCdCq539prht19JPLpGHs9Er4gK1b5QqTJAaz7X1Jdqy'
+name = '志愿'
+detail = '养老院'
+hash1 = c.addVolunteer(ad, pr, name, detail)
+print(hash1)
