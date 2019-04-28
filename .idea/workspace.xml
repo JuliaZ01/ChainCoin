@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51db6b89-731b-4430-9507-439b71783d4c" name="Default" comment="" />
+    <list default="true" id="51db6b89-731b-4430-9507-439b71783d4c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/usermana/templates/usermana/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/usermana/templates/usermana/start.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2067">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="210">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
             </state>
           </provider>
         </entry>
@@ -120,7 +123,6 @@
         <option value="$PROJECT_DIR$/volun/models.py" />
         <option value="$PROJECT_DIR$/invest/views.py" />
         <option value="$PROJECT_DIR$/mysite/urls.py" />
-        <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/invest/models.py" />
         <option value="$PROJECT_DIR$/usermana/admin.py" />
         <option value="$PROJECT_DIR$/usermana/templates/index.html" />
@@ -133,6 +135,7 @@
         <option value="$PROJECT_DIR$/usermana/views.py" />
         <option value="$PROJECT_DIR$/usermana/models.py" />
         <option value="$PROJECT_DIR$/projects/views.py" />
+        <option value="$PROJECT_DIR$/mysite/settings.py" />
       </list>
     </option>
   </component>
@@ -273,16 +276,15 @@
       <workItem from="1555848271045" duration="7738000" />
       <workItem from="1556363590067" duration="9552000" />
       <workItem from="1556376417127" duration="3870000" />
-      <workItem from="1556447586413" duration="256000" />
+      <workItem from="1556447586413" duration="526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79843000" />
+    <option name="totallyTimeSpent" value="80113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24432677" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -675,8 +677,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2067">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="210">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>

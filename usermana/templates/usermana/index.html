@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <title>首页</title>
+    <style>
+        body{
+    background-image:url("/static/sky.jpg");
+    background-position: center 0;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    }
+        p.center
+        {
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size:3em;
+        }
+        button.btn-default{
+            background-color: rgba(0,0,0,0.1);
+            font-size:0.5em;
+            color:white;
+        }
+        button.btn-default:hover{
+            background-color: rgba(0,0,0,0.1);
+        }
+        a:link {color:white;}    /* 未被访问的链接 */
+        a:visited {color:white;} /* 已被访问的链接 */
+        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
+        a:active {color:darkblue;}  /* 正在被点击的链接 */
+
+    </style>
+    <script>
+        function test()
+        {
+            window.open("/logout");
+        }
+    </script>
+</head>
+<body>
+
+{% extends 'Base.html' %}
+{% block content%}
+<div style="background-color:  rgba(255,255,255,0.75);width: 1200px;padding: 25px;margin: 75px;">
+    <form class="navbar-form navbar-right" action="{% url 'usermana:index' %}" method="post">
+                        <div class="form-group">
+                            <input type="text" name="username" id="username" placeholder=" 可查询用户志愿情况">
+                        </div>
+                        <input type="submit" class="btn btn-default" style="background-color: rgba(0,0,0,0.1);color:white;height:35px;width:55px;"value="查询" >
+                     </form>
+    {% if volu_list %}
+    <table class="table-bordered " style="width: 600px;margin-top: 15px;margin-bottom: 15px;">
+   <thead>
+      <tr>
+         <th style="width: 150px;text-align:center;">志愿者</th>
+         <th style="text-align:center;">志愿活动名</th>
+         <th style="text-align:center;">志愿详情</th>
+      </tr>
+   </thead>
+    <br>
+   <tbody>
+          {% for Volunteer in volu_list %}
+      <tr>
+          <td style="width: 150px;text-align:center;">{{ Volunteer.Vl_user.phone_number }}</td>
+          <td style="text-align:center;">{{ Volunteer.Vl_name }}</td>
+          <td style="text-align:center;">{{ Volunteer.Vl_detail }}</td>
+      </tr>
+           {% endfor %}
+   </tbody>
+</table>
+<br>
+{% else %}
+    <p>暂无志愿活动记录</p>
+{% endif %}
+<button type="button" class="btn btn-info navbar-btn" style="font-size:1em"><a href="{% url 'usermana:start' %}">记录我的志愿活动 </a></button>
+    </div>
+{% endblock %}
+</body>
+</html>
