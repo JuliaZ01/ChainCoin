@@ -1,0 +1,191 @@
+
+/*============	Media 768Px Start ============ */ 
+@media (min-width: 768px) and (max-width: 990px) {
+	#main-header .sub-dropdown {width: 160px;}
+	.main-head {text-align: center;}
+	.main-head .left-side {display: inline-block; float: none;}
+	.main-head .right-side {display: inline-block; float: none;}
+
+	.main-section .signup-area .main-heading h1 {text-align: center;}
+	.main-section .signup-area .cs-btn {display: inline-block; float: none;}
+	.main-sectio .signup-area .main-heading {display: inline-block;}
+	.main-section .page-sidebar .widget {width: 50%; float: left; padding: 0 0 0 10px;}
+	body .breadcrumb-sec {background-size: cover !important;}
+	.section-title[class*="col-lg"] {width: 100%;}
+	.main-section .cs-profile-holder .field-col {margin: 0 -4px 10px 5px; padding: 0;}
+	.main-section .author-info figure {display: inline-block; width: auto; margin: 0 0 10px;}
+	.main-section .author-info .info-text,
+	.main-section .author-info .price-box {display: inline-block; width: 100%;}
+	.main-section .author-info .price-box li {margin: 0 15px 0 0; float: left;}
+	.main-section .author-info .info-text {margin: 0 0 10px 0;}
+
+	body #footer-sec .widget_newsletter .email, body #footer-sec .widget_newsletter input[type="email"] {width: 73%;}
+	.main-section [class*="col-lg"] {width: 100%;}
+	.main-section [class*="col-sm"] {display: inline-block;}
+	.page-section .user-signup .social-network li a {min-width: 300px;}
+	.page-section .under-text {padding: 30px 0 5px 40px;}
+	.page-section .under-wrapp .under-logo {padding: 146px 20px;}
+	.main-section .cause-holder {width: 100%;}
+		
+}
+	
+/*============ Media 420Px Start ============ */
+@media (max-width: 767px) {
+	#main-header {position: relative; z-index: 9; text-align: center;}
+	#main-header .slicknav_nav ul {width: 100%; opacity: 1; visibility: visible; position: initial; transform: translateY(0px); background:#222; transition: none 0s ease 0s ;}
+	#main-header .slicknav_menu {width: 100%; display: block; background-color: #fe6500; position: relative; display: inline-block;}
+	.js .navigation > ul {display:none;}
+	#main-header .slicknav_btn {background: none; margin: 0; width: 100%;}
+	#main-header .slicknav_menu .slicknav_icon {float: right;}
+	#main-header .main-head {text-align: center; margin: 0 0 10px;}
+	#main-header .left-side, #main-header .right-side {display:inline-block; float:none; vertical-align: middle;}
+	#main-header .right-side {padding: 0;}
+	#main-header .slicknav_nav {background-color: #555555;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    width: 100%;}
+	
+	body .cs-banner figcaption .text {margin: -85px 0 0;}
+	body .cs-banner figcaption .text h2 {font-size: 30px;}
+	
+	.main-section .team-simple ul li {width: 25%;}
+	.main-section .main-heading.left .cs-btn {float: left; margin:0 0 20px 0;}
+	.main-section .main-heading.top-center > h1 {width: 100%; display: inline-block;}
+	.main-section .signup-area {text-align: center; margin: 0;}
+	.main-section .signup-area .main-heading {display: inline-block;}
+	.main-section .signup-area .cs-btn {display: inline-block; float: none;}
+	.main-section .signup-area .main-heading h1 {text-align: center;}
+	.section-title[class*="col-lg"] {width: 100%;}
+	
+	.main-section .page-sidebar .widget {width: 50%; float:left; padding: 0 0 0 10px;}
+	.main-section .pagination ul li {margin: 0 4px 5px;}
+	.main-section .widget_doc ul {width: 100%; display: inline-block;}
+	body .breadcrumb-sec {background-size: cover !important;}
+	.cs-members .title, .agentinfo-detail {width: 100%;}
+	.main-section .cs-blog.blog-lrg .bloginfo-sec .date-time ~ .blog-text {padding: 25px 20px 0 88px;}
+	.main-section .under-text .is-countdown {margin: 0 0 25px;}
+	.main-section .cs-result .search-area {width: 100%;}
+	.main-section .cs-result.suggestion {padding: 0 20px;}
+	.main-section .cause-holder {width: 100%; display: inline-block;}
+	.main-section .profile-block {padding: 0 0 0 0;}
+	.main-section .cs-profile-holder .field-col {margin: 0 -4px 10px 5px; padding: 0;}
+	.main-section .author-info figure {display: inline-block; width: auto; margin: 0 0 10px;}
+	.main-section .author-info .info-text,
+	.main-section .author-info .price-box {display: inline-block; width: 100%;}
+	.main-section .author-info .price-box li {margin: 0 15px 0 0; float: left;}
+	.main-section .author-info .info-text {margin: 0 0 10px 0;}
+	.main-section .donate-area {width: 100%;}
+	
+	body #footer-sec .widget_newsletter .email, 
+	body #footer-sec .widget_newsletter input[type="email"] {width: 70%;}
+	body #copyright {text-align: center;}
+	#copyright .footer_icon, #copyright .footer-nav, body #copyright p {display: inline-block; float: none;}
+	#copyright .footer_icon {padding: 0 0 15px 0;}
+	#copyright .fnav-area {margin: 0 0 10px 0;}
+	
+}
+/*============ Media 300Px Start ============ */
+@media (max-width: 480px) {
+	.wrapper {
+    box-sizing: border-box;
+    float: left;
+    margin-top: 0.01em;
+    padding: 0 15px;
+    width: 100%;
+}
+	.main-section [class*="col-sm"], .main-section [class*="col-lg"] {display: inline-block; width: 100%;}
+	.main-head .logo {display: inline-block; float: none;}
+	.main-head .profile-view {padding: 15px 0 10px 10px; display: block;}
+	.main-section .page-sidebar .widget {width: 100%; float:left;}
+	body .cs-banner figcaption .text {margin: -40px 0 0;}
+	body .cs-banner figcaption .text h2 {font-size: 16px;}
+	.cs-banner figcaption .text span {display: none;}
+	.main-section .team-simple ul li {width: 50%;}
+	body .breadcrumb-sec .cs-table {height: 130px;}
+	body .breadcrumb-sec .cs-table strong {display: none !important;}
+	.main-section .testimonial {box-sizing: border-box; display: inline-block; padding: 0 10px 0 0; width: 100%;}
+	.main-section .cs-filter-menu li {width: 100%; border-bottom: 1px solid #eeeeee;}
+	.main-section .grid-filter {float: left;}
+	.main-section .listing_default .content_info {width: 100%; padding: 0;}
+	.listing_default .cs_thumbsection {width: 100%;}
+	.detail-tabs .nav-tabs li {width: 100%; border-bottom: 1px solid #f2f2f2;}
+	.detail-tabs .nav-tabs li.active a:before {display: none;}
+	.widget_doc ul li {width: 100%;}
+	.main-section .about-info figure ~ .agentdetail-info {width: 100%; padding: 10px 0 0; display: inline-block;}
+	.main-section .category-list, .agentdetail-info .backed {margin: 0 52px 0 0;}
+	.main-section .agentinfo-detail .about-info .right-info {text-align: left;}
+	.main-section .agentinfo-detail .about-info .left-info {margin: 0 0 5px;}
+	.main-section .cs-blog.blog-lrg .bloginfo-sec .date-time ~ .blog-text {float: left; padding: 25px 15px 0; width: 100%;}
+	.main-section .blog-medium .main-thumb ~ .bloginfo-sec {width: 100%; padding: 0;}
+	.main-section .image-frame.simple figure {width: 100%; margin: 0 0 20px 0;}
+	.main-section .image-frame.simple .text {width: 100%; float: left;}
+	.main-section .cs-tabs.box .nav-tabs li a {width: 100%; text-align: center;}
+	.main-section .cs-tabs.box .nav-tabs > li {width: 100%; margin: 0 0 5px;}
+	.main-section .cs-tabs .nav-tabs {width: 100%;}
+	.main-section .cs-tabs .nav-tabs li a {width: 100%;}
+	.main-section .twitter-ces .cs-twitter .cs-text {width: 100%; margin: 0 0 10px;}
+	.main-section .twitter-ces .cs-twitter .cs-text span {text-align: left;}
+	.main-section .twitter-ces .cs-twitter p {float: left; padding: 0 0 10px 10px;}
+	.main-section .cs-tabs .tab-content {width: 100%;}
+	.main-section .date-time ~ .post-option-panel {width: 100%; float: left; padding: 10px 0 0;}
+	.main-section .cs-post-sharebtn article .post-np, .main-section .cs-post-sharebtn article h3,
+	.main-section .cs-post-sharebtn article time {display: block; float: none;}
+	.main-section .cs-post-sharebtn article .post-np {margin: 0;}
+	.main-section #comment .children {padding-left: 0;}
+	.main-section .comment-respond .comment-form p.comment-form-author, 
+	.main-section .comment-respond .comment-form p.comment-form-email, 
+	.main-section .comment-respond .comment-form p.comment-form-website {width: 100%; padding-left: 0;}
+	.main-section .bg-pricing .text-area {padding: 0 10px; text-align: center;}
+	.main-section .bg-pricing .btn-area {text-align: center;}
+	.main-section .bg-pricing .btn-area a {float: none; display: inline-block;}
+	.main-section .cs-services.classic .text {width: 100%; display: inline-block;}
+	.page-section .sign-form:after, .page-section .user-signup .social-network:before,
+	.page-section .user-signup .social-network:after {display: none;}
+	.page-section .user-signup .social-network {padding-left: 0;}
+	.user-signup .signup-form ul li {width: 100%;}
+	.page-section .user-signup .social-network li a {min-width: 285px;}
+	.page-section .cs-content404 .desc {width: 100%;}
+	.main-section .under-wrapp .under-logo {padding: 60px 10px; width: 100%; border-bottom: 2px solid #21232e; border-right: none;}
+	.main-section .under-text {width: 100%; padding: 50px 0 60px 40px;}
+	.main-section .terms-list li i {width: 5%; padding: 0 0 5px;} 
+	.main-section .faq-area .panel-title a {padding: 0 23px 0 0;}
+	.cs-result.site-map {padding: 0 0 0 10px;}
+	.main-section .cs-result.relevent {padding: 35px 20px 0;}
+	.main-section .cs-result.relevent .cs-description {float: left; width: 100%;}
+	.main-section .profile-block {padding: 0;}
+	.main-section .scroll-nav li.active::before {display: none;}
+	.main-section .scroll-nav li {border-bottom: 1px solid #cccccc; width: 100%;}
+	.main-section .cs-ads-area article .detail-area {width: 100%; display: inline-block; padding: 10px 0 0;}
+	.main-section .cs-ads-area article figure {width: 100%;}
+	.main-section .cs-ads-area article .detail-area .ads-btn {top: 10px;}
+	.main-section .cs-ads-area article .edit-area .edit-opts {float: left;}
+	.main-section .cs-ads-area article .edit-opts li {margin: 0 30px 0 0;}
+	.main-section .cause-holder .cs-table-holder table thead {float: left; width: 100%;}
+	.main-section .cause-holder .cs-table-holder table tbody,
+	.main-section .cs-profile-holder table td, .main-section .cs-profile-holder table th {float: left; width: 100%;}
+	.main-section .cs-profile-holder .upload-box {width: 100%; display: inline-block;}
+	.main-section .cs-profile-holder li > label {width: 100%;}
+	.main-section .cs-profile-holder .fields-area {width: 100%;}
+	.main-section .galleryupload li.featured-image {width: 100%; padding: 0 0 10px 0;}
+	.main-section .galleryupload li.gallery-thumb {width: 100%;}
+	.main-section .gallery-thumb .campaigs_images li {width: 50%;}
+	.main-section .multiselect-holder .ui-multiselect.ui-helper-clearfix.ui-widget,
+	.main-section .cs-profile-holder .field-col {width: 100% !important;}
+	.main-section .donate-area .Sigup-btn a {width: 100%; border-radius: 0;}
+	.main-section .donate-area .Sigup-btn .account-btn {border-radius: 0; border-right:1px solid #ededed; border-bottom: none;}
+	.main-section .donate-area .nav-tabs li {width: 100%;}
+	.main-section .donate-area .nav-tabs li a {margin: 0 0 5px 0;}
+	.main-section .select-payments .radio-image-wrapper {width: 100%;} 
+	
+	.main-section .footer-nav ul li {float: none; display: inline-block;}
+	#footer-sec .ads-sec img {width: 100%;}
+}
+
+/*============	Media 940Px Start ============ */
+@media screen and (min-width: 991px) and (max-width: 1054px) {
+	.col-lg-12, .col-lg-12{width: 100%;}
+
+}

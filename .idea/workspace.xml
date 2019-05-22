@@ -2,13 +2,237 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51db6b89-731b-4430-9507-439b71783d4c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/nodejs-link/get_balance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/templates/accounts/donate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invest/templates/invest/donate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/color.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/flexslider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fonts/flexslider-icon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fonts/flexslider-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fonts/flexslider-icon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fonts/flexslider-icon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/iconmoon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/jplayer.blue.monday.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/language-selector-remove-able-css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/sumoselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/themetypo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/ui.multiselect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/widget.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/162.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/Supporters9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/about-gallry1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/about-gallry2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/about-gallry3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/about-gallry4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/adv2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/auther1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/author-img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/author-img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/author-img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-counter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-gallry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-pricing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-services1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-services2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-spreatr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-under-page.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/bg-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-lrg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-lrg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-lrg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-med1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-med2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/blog-wid1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/cancel-img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/causes-list1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/contect-srvice1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/contect-srvice2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/contect-srvice3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/contect-srvice4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/detail-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/error-img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallery-img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/gallry9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/ico-services1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/ico-services2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/ico-services3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-adminpost2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-coment1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-coment2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-coment3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-coment4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-partner9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-testi-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img-testi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/list-grid9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/listing-grid-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/login-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/mas8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pic2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pic3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/plus-img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/plus-img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/post-img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pyment1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pyment2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pyment3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/pyment4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/result1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-box1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-box2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-box3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/services-list8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/tab1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/team1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/team2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/team3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/team4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/under-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/extra-images/user-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/ads.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bg-dropdown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bg-partners.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bg-quotes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bg-signup.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/dots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/footer-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/footer-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/ico-paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/jquery.countdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/jquery.flexslider-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/jquery.jplayer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/jquery.sumoselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/masonary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/skills-progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/scripts/ui.multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index/templates/index/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/index/aboutus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/templates/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/templates/index/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/index/templates/index/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/index/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invest/templates/invest/invest.html" beforeDir="false" afterPath="$PROJECT_DIR$/invest/templates/invest/invest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/templates/login/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/login/templates/login/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/templates/projects/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/templates/projects/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/templates/projects/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/templates/projects/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/命题报告.docx" beforeDir="false" afterPath="$PROJECT_DIR$/命题报告.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/项目PPT.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/项目PPT.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermana/templates/usermana/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermana/templates/usermana/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermana/templates/usermana/servicecharge.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermana/templates/usermana/servicecharge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermana/templates/usermana/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/usermana/templates/usermana/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usermana/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usermana/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,70 +246,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/models.py">
+        <entry file="file://$PROJECT_DIR$/usermana/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/templates/projects/start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="47" column="74" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projects/views.py">
+        <entry file="file://$PROJECT_DIR$/templates/Base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="59" column="100" selection-start-line="59" selection-start-column="100" selection-end-line="59" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/donate.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+              <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usermana/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invest/templates/invest/invest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115">
-              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index/templates/index/aboutus.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -114,26 +350,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mysite/templates/mysite/index.html" />
-        <option value="$PROJECT_DIR$/login/urls.py" />
-        <option value="$PROJECT_DIR$/login/templates/login/test.html" />
-        <option value="$PROJECT_DIR$/index/views.py" />
         <option value="$PROJECT_DIR$/projects/templates/projects/invest.html" />
         <option value="$PROJECT_DIR$/projects/urls.py" />
         <option value="$PROJECT_DIR$/invest/urls.py" />
         <option value="$PROJECT_DIR$/login/admin.py" />
         <option value="$PROJECT_DIR$/accounts/migrations/urls.py" />
-        <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/mysite/views.py" />
         <option value="$PROJECT_DIR$/header/header.php" />
         <option value="$PROJECT_DIR$/projects/templates/projects/save.html" />
-        <option value="$PROJECT_DIR$/index/urls.py" />
-        <option value="$PROJECT_DIR$/index/templates/index/index.html" />
         <option value="$PROJECT_DIR$/login/templates/login/index.html" />
-        <option value="$PROJECT_DIR$/index/templates/index/message.html" />
-        <option value="$PROJECT_DIR$/projects/templates/projects/start.html" />
-        <option value="$PROJECT_DIR$/invest/templates/invest/invest.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/accounts/index.html" />
         <option value="$PROJECT_DIR$/volun/migrations/urls.py" />
         <option value="$PROJECT_DIR$/volun/templates/show.html" />
         <option value="$PROJECT_DIR$/volun/templates/volun/show.html" />
@@ -145,34 +370,45 @@
         <option value="$PROJECT_DIR$/usermana/admin.py" />
         <option value="$PROJECT_DIR$/usermana/templates/index.html" />
         <option value="$PROJECT_DIR$/usermana/templates/start.html" />
-        <option value="$PROJECT_DIR$/usermana/templates/usermana/index.html" />
-        <option value="$PROJECT_DIR$/usermana/templates/usermana/start.html" />
         <option value="$PROJECT_DIR$/usermana/models.py" />
         <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/login/views.py" />
-        <option value="$PROJECT_DIR$/login/templates/login/register.html" />
         <option value="$PROJECT_DIR$/login/models.py" />
         <option value="$PROJECT_DIR$/invest/models.py" />
         <option value="$PROJECT_DIR$/projects/models.py" />
-        <option value="$PROJECT_DIR$/projects/templates/projects/show.html" />
-        <option value="$PROJECT_DIR$/projects/templates/projects/detail.html" />
         <option value="$PROJECT_DIR$/invest/views.py" />
-        <option value="$PROJECT_DIR$/projects/views.py" />
         <option value="$PROJECT_DIR$/usermana/templates/usermana/service charge.html" />
-        <option value="$PROJECT_DIR$/usermana/views.py" />
         <option value="$PROJECT_DIR$/usermana/urls.py" />
+        <option value="$PROJECT_DIR$/index/templates/index/index2.html" />
+        <option value="$PROJECT_DIR$/index/views.py" />
+        <option value="$PROJECT_DIR$/index/urls.py" />
+        <option value="$PROJECT_DIR$/index/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/index/templates/index/message.html" />
+        <option value="$PROJECT_DIR$/login/templates/login/register.html" />
+        <option value="$PROJECT_DIR$/projects/templates/projects/show.html" />
+        <option value="$PROJECT_DIR$/invest/templates/invest/invest.html" />
+        <option value="$PROJECT_DIR$/projects/templates/projects/detail.html" />
+        <option value="$PROJECT_DIR$/accounts/urls.py" />
+        <option value="$PROJECT_DIR$/invest/templates/invest/donate.html" />
         <option value="$PROJECT_DIR$/usermana/templates/usermana/servicecharge.html" />
-        <option value="$PROJECT_DIR$/accounts/views.py" />
-        <option value="$PROJECT_DIR$/templates/Base.html" />
         <option value="$PROJECT_DIR$/index/templates/index/aboutus.html" />
+        <option value="$PROJECT_DIR$/usermana/templates/usermana/index.html" />
+        <option value="$PROJECT_DIR$/usermana/views.py" />
+        <option value="$PROJECT_DIR$/projects/views.py" />
+        <option value="$PROJECT_DIR$/accounts/views.py" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/donate.html" />
+        <option value="$PROJECT_DIR$/accounts/templates/accounts/index.html" />
+        <option value="$PROJECT_DIR$/projects/templates/projects/start.html" />
+        <option value="$PROJECT_DIR$/usermana/templates/usermana/start.html" />
+        <option value="$PROJECT_DIR$/templates/Base.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-264" />
-    <option name="y" value="31" />
-    <option name="width" value="1371" />
-    <option name="height" value="679" />
+    <option name="x" value="-426" />
+    <option name="y" value="13" />
+    <option name="width" value="1386" />
+    <option name="height" value="683" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -190,46 +426,32 @@
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="nodejs-link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="extra-images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="usermana" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="usermana" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,20 +554,27 @@
       <workItem from="1556531888128" duration="596000" />
       <workItem from="1556542270163" duration="1593000" />
       <workItem from="1556622446101" duration="1317000" />
+      <workItem from="1557059490262" duration="1926000" />
+      <workItem from="1557075041692" duration="1101000" />
+      <workItem from="1557498633937" duration="1285000" />
+      <workItem from="1557847487758" duration="717000" />
+      <workItem from="1558440117857" duration="975000" />
+      <workItem from="1558441229248" duration="13657000" />
+      <workItem from="1558487737416" duration="13378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94847000" />
+    <option name="totallyTimeSpent" value="127886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2632375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25113463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32844037" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.062295083" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -356,7 +585,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.04918033" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.049099836" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -364,11 +593,11 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24810892" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25113463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32844037" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.062295083" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -379,7 +608,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3295082" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.049099836" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -391,53 +620,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index/templates/index/message.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="65" column="76" selection-start-line="65" selection-start-column="76" selection-end-line="65" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runproject.txt" />
-    <entry file="file://$PROJECT_DIR$/index/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/volun/migrations/urls.py" />
-    <entry file="file://$PROJECT_DIR$/volun/templates/show.html" />
-    <entry file="file://$PROJECT_DIR$/volun/templates/volun/show.html" />
-    <entry file="file://$PROJECT_DIR$/invest/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invest/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/invest/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -505,117 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/templates/projects/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="73" column="35" lean-forward="true" selection-end-line="84" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="91" column="109" selection-start-line="91" selection-start-column="109" selection-end-line="91" selection-end-column="109" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2277">
           <caret line="99" column="6" lean-forward="true" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/templates/login/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invest/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="66" lean-forward="true" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/templates/projects/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/templates/projects/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="74" column="6" lean-forward="true" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,86 +711,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/service charge.html" />
-    <entry file="file://$PROJECT_DIR$/usermana/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usermana/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="51" column="11" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/servicecharge.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-897">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index/templates/index/aboutus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invest/templates/invest/invest.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115">
-          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usermana/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -726,20 +721,275 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/index2.html" />
+    <entry file="file://$PROJECT_DIR$/index/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="92">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/templates/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invest/templates/invest/invest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#strong#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#main#0;n#body#0;n#html#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/projects/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" selection-start-line="10" selection-end-line="23" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invest/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/templates/login/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invest/templates/invest/donate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invest/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/servicecharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/projects/show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="64" column="165" lean-forward="true" selection-start-line="64" selection-start-column="165" selection-end-line="64" selection-end-column="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usermana/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1840">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index/templates/index/aboutus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="59" column="127" selection-start-line="59" selection-start-column="127" selection-end-line="59" selection-end-column="127" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usermana/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="48" selection-end-line="60" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state relative-caret-position="368">
+          <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/donate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/accounts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/projects/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="47" column="74" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usermana/templates/usermana/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" column="100" selection-start-line="59" selection-start-column="100" selection-end-line="59" selection-end-column="100" />
         </state>
       </provider>
     </entry>

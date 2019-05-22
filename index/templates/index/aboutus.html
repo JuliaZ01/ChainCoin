@@ -1,71 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>start your projects</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>关于我们</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
-        div.zhongxin{
-             background-color:  rgba(255,255,255,0.75);
-            width: 1200px;
-            padding: 25px;
-            margin: 75px;
-        }
-    </style>
-    <script>
-        function test()
-        {
-            window.open("/logout");
-        }
-    </script>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于我们</title>
+
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div class="zhongxin"style="padding:100px;font-size:3.5em">
-星空筹
-</div>
+	<div class="breadcrumb-sec" style="background:url(/static/assets/extra-images/banner.jpg) no-repeat; background-size:100% auto; min-height:157px!important;">
+		<div class="absolute-sec">
+			<div class="container">
+				<div class="cs-table">
+					<div class="cs-tablerow">
+						<div class="pageinfo page-title-align-left">
+							<h1 style="color:#fff !important; text-transform:none;">关于我们</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main Content -->
+	<main id="main-content">
+	  <div class="main-section">
+		<div class="page-section">
+		  <div class="container">
+			<div class="row">
+			  <div class="section-fullwidth col-lg-12">
+			  	<div class="cs-content-holder">
+				  <div class="row">
+					  <div class="col-lg-12">
+						  <div class="heading-area">
+							<h2>星空筹是一个基于Bumo区块链实现的大病筹款平台。 利用区块链的特性，旨在克服目前存在的大病筹款平台的缺点，重构人们之间的信任关系、永存善心善举记录。</h2>
+
+						  </div>
+					  </div>
+
+
+				  <div class="col-lg-12">
+							<div class="image-frame simple">
+								<figure>
+									<iframe src="http://www.bubifans.com/ueditor/php/upload/video/20181024/1540376662325042.mp4" width="500" height="330"></iframe>
+								</figure>
+								<div class="text">
+									<h2>星空筹可以解决什么问题？<br>
+</h2>
+									<p>星空筹采用的区块链本身是一个非第三方管理的众筹模式，在这种模式下，不会出现第三方数据泄露或者被窃取的情况，这在很大程度上保证了数据的安全可靠性</p>
+									<p>星空筹区块链的数据是永久保存的，永远不用担心丢失问题，爱心人士的捐款信息永久记录在星空，成为伴随一生的助人记录。</p>
+                                    <p>星空筹区块链上的手续费在较低水平，同时这笔费用也不属于第三方平台，一 定程度上杜绝了第三方平台徇私舞弊现象的发生。</p>
+                                    <p>失信筹款人的信息将永久保存在区块链上，禁止再发起筹款业务。同时 我们从大学助学金获得者应当参加志愿活动获得灵感。我们也为每位受 益人在区块链上记录了志愿活动，所有人都可以查看，对受益人也是一 种监督作用。</p>
+</p>
+									<a href="#" class="contect-btn">联络我们</a>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  </div>
+	</main>
+
+	<!-- Main Content -->
+
 {% endblock %}
 
 </body>

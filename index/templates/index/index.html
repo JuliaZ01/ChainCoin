@@ -1,67 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>首页</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>首页</title>
 
-    </style>
-    <script>
-        function test()
-        {
-            window.open("/logout");
-        }
-    </script>
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
+
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<p class="center">
-  <q>众人拾柴火焰高</q><br>
-    区块链大病筹款平台<br>
-    <button type="button" class="btn btn-default button1" ><a href="{% url 'projects:start' %}"> 立即发起众筹 </a></button>
-</p>
+
+  <!-- Header -->
+
+  <!-- Header -->
+	<div class="cs-banner">
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<figure>
+						<img src="/static/assets/extra-images/banner.jpg" alt="#">
+						<figcaption>
+							<div class="text">
+								<h2>星空筹 基于区块链的大病筹款平台</h2>
+								<div class="spreator5"></div>
+								<span>助人记录、志愿活动、失信名单<br>
+记录如星空般永恒</span>
+								<a href="{% url 'projects:start' %}" class="explore-btn cs-bgcolor">发起项目</a>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="/static/assets/extra-images/banner.jpg" alt="#">
+						<figcaption>
+							<div class="text">
+								<h2>星空筹 基于区块链的大病筹款平台</h2>
+								<div class="spreator5"></div>
+								<span>助人记录、志愿活动、失信名单<br>
+记录如星空般永恒</span>
+								<a href="{% url 'projects:start' %}" class="explore-btn cs-bgcolor">发起项目</a>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- Main Content -->
+	<main id="main-content">
+		<div class="main-section">
+			<div class="page-section">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth col-lg-12">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="main-heading top-center">
+										<h1>如何在星空筹上寻求帮助？</h1>
+										<strong class="title">星空筹旨在数据清晰化、透明化、重构信任关系</strong> </div>
+									<div class="col-lg-4 col-md-4 col-sm-6">
+										<article class="cs-services modren top-center ">
+											<figure><img src="/static/assets/extra-images/ico-services1.png" alt=""></figure>
+											<div class="text">
+												<h2>创建一个新项目</h2>
+												<p>填写您需要帮助的理由、上传相关凭证，设定您的目标筹款额度，等待捐款。</p>
+												<a href="#" class="read-more">Read More</a>
+											</div>
+										</article>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-6">
+										<article class="cs-services modren top-center ">
+											<figure><img src="/static/assets/extra-images/ico-services2.png" alt=""></figure>
+											<div class="text">
+												<h2>分享项目界面</h2>
+												<p>将项目界面分享出去，将帮助您提高筹款成功的概率。</p>
+												<a href="#" class="read-more">Read More</a>
+											</div>
+										</article>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-6">
+										<article class="cs-services modren top-center ">
+											<figure><img src="/static/assets/extra-images/ico-services3.png" alt=""></figure>
+											<div class="text">
+												<h2>结算您的项目</h2>
+												<p>我们将在您发起筹款90天后为您结算项目，根据是否达成目标金额，判断筹款成功与否。</p>
+												<a href="#" class="read-more">Read More</a>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="page-section">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth col-lg-12">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="main-heading top-center col-lg-12">
+										<h1>为什么选择星空筹？</h1>
+										<strong class="title">区块链给予我们的特点</strong>
+									</div>
+									<div id="cs-testimonial-595" class="testimonial left italic-style">
+										<ul class="slides">
+											<li class="col-lg-6 col-md-6 col-sm-6">
+												<div class="question-mark">
+													<p>所有筹款交易记录、失信名单、志愿信息公开、透明、永久地保存在区块链上，任何人、任何时间都可以查看。</p>
+												</div>
+											</li>
+											<li class="col-lg-6 col-md-6 col-sm-6">
+												<div class="question-mark">
+													<p>手续费低廉，不从用户的筹款金额中抽取手续费。</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-section" style="background:url(/static/assets/images/bg-signup.jpg) no-repeat 100% 50%; background-size:cover; ">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth col-lg-12">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="signup-area col-lg-12">
+										<a href="{% url 'projects:start' %}" class="cs-btn">开始您的项目</a>
+										<div class="main-heading">
+											<h1>从这里开始</h1>
+											<strong class="title">底层区块链服务由BUMO区块链提供</strong>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--// Main Content //-->
+
+
+	<!--// CopyRight //-->
+
 {% endblock %}
+<!-- jQuery (necessary JavaScript) -->
+
 </body>
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的捐赠</title>
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
+</head>
+<body>
+{% extends 'Base.html' %}
+{% block content%}
+	<main id="main-content">
+		<div class="main-section">
+			<div class="page-section">
+				<div class="profile-pages">
+					<div class="container">
+						<div class="row">
+							<div class="section-fullwidth col-lg-12">
+								<div class="cs-content-holder">
+									<div class="row">
+										<div class="cause-holder">
+											<div class="col-lg-12">
+												<div class="cs-auther">
+													<figure>
+														<a href="#"><img src="/static/assets/extra-images/auther1.jpg" alt="#"></a>
+													</figure>
+													<div class="text">
+														<h3>{{ request.session.username }}</h3>
+
+													</div>
+												</div>
+												<div class="right-sec">
+													<ul class="cs-donations">
+														 <li>
+															<span>账户余额</span>
+															<strong>{{ coins }}币</strong>
+                                                         </li>
+
+														<li>
+															<span>区块链地址</span>
+															<strong>{{ address }}</strong>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+											<div class="col-lg-12">
+												<div class="profile-block">
+													<ul class="scroll-nav">
+													        <li class="active"><a href="{% url 'accounts:donate' %}"><i class="icon-money"></i>我的捐赠</a></li>
+													        <li><a href="{% url 'projects:start' %}"><i class="icon-star-o"></i>创建新项目</a></li>
+													        <li><a href="{% url 'accounts:index' %}"><i class="icon-gear"></i>我的项目</a></li>
+                                                            <li><a href="{% url 'usermana:start' %}"><i class="icon-star-o"></i>创建志愿活动</a></li>
+
+
+															<li><a href="{% url 'login:logout' %}"><i class="icon-sign-in"></i>注销</a></li>
+														</ul>
+														<div class="cs-profile-area">
+															<div class="cs-title no-border">
+																<h4>我的捐赠</h4>
+															</div>
+															<div class="cs-profile-holder">
+																<div class="cs-table-holder">
+																{% if bill_list %}
+																	<table>
+																		<thead>
+																			<tr>
+																				<th>#</th>
+																				<th>项目名称</th>
+																				<th>日期</th>
+																				<th>捐赠金额</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																		{% for investbill in bill_list %}
+																			<tr>
+																				<td>{{ forloop.counter }}</td>
+																				<td><a href="{% url 'projects:detail' investbill.iv_to.id %}">{{ investbill.iv_to.pjts_name }}</a></td>
+																				<td>{{ investbill.iv_time |date:"Y-m-d"}}</td>
+																				<td>{{ investbill.iv_coins |floatformat}}</td>
+																			</tr>
+																		{% endfor %}
+																		</tbody>
+																	</table>
+																	 {% else %}
+																		此项暂无
+																	{% endif %}
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	</main>
+{% endblock %}
+</body>
+</html>

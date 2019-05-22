@@ -1,6 +1,6 @@
 from django.http import HttpResponse,Http404
 from .models import projects
-from login.models import Users
+from login.models import Users,account
 from usermana.models import Blacklist
 from django.shortcuts import render
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -69,7 +69,16 @@ def start(request):
                     else:
                         return render(request, 'index/message.html', {'msg': "提交失败，请联系管理员。"})
     else:
-        return render(request,'projects/start.html')
+        try:
+            U = Users.objects.get(phone_number=request.session['username'])
+        except KeyError:
+            return render(request, 'index/message.html', {'msg': "用户未登录，请登录后再进行操作"})
+        else:
+            a = account.objects.get(ac_users=U)
+            msg = {}
+            msg['coins'] = a.ac_coins
+            msg['address'] = U.address
+        return render(request,'projects/start.html',msg)
 
 
 def show(request):

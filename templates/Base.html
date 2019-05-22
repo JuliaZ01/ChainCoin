@@ -1,87 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-        <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
-    </style>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="{% url 'index:index' %}" >星空筹</a>
-        </div>
-        <div>
-            <ul class="nav navbar-nav">
-             <li class="active"><a href="{% url 'index:index' %} ">首页</a> </li>
-             <li class="active"><a href="{% url 'projects:show' %}">更多项目</a></li>
-             <li class="active"><a href="{% url 'usermana:index' %}">志愿活动</a> </li>
-              <li class="active"><a href="{% url 'usermana:scharge' %}">手续费规则</a> </li>
-             <li class="active"><a href="{% url 'index:aboutus' %}">关于我们</a> </li>
+<div class="wrapper">
+  <header id="main-header">
+    <div class="container">
+    <div class="main-head">
+      <div class="left-side">
+        <div class="logo"><a href="{% url 'index:index' %}"><img src="/assets/images/logo.png" alt=""></a></div>
+        <nav class="navigation">
+          <ul>
+            <li><a href="{% url 'index:index' %}">首页</a></li>
+            <li><a href="{% url 'projects:show' %}">更多项目</a>
+            </li>
+            <li><a href="{% url 'usermana:index' %}">志愿活动</a></li>
+            <li><a href="#">公告</a>
+              <ul class="sub-dropdown">
+                <li><a href="{% url 'usermana:scharge' %}">手续费规则</a></li>
+                <li><a href="{% url 'index:aboutus' %}">关于我们</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-            </ul>
+      <div class="right-side">
+        <div class="cs-search-block">
         </div>
-        <div>
-            {% if request.session.is_login %}
-                <div class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'accounts:index' %}"><span class="glyphicon glyphicon-user"></span> 欢迎您，用户{{ request.session.username }}</a></li>
-                    <button type="button" class="btn btn-info navbar-btn" style="height:35px;width:55px;font-size:1em"><a href="{% url 'login:logout' %}">注销 </a></button>
-                </div>
-            {% else %}
-                <div>
-                    <form class="navbar-form navbar-right" action="{% url 'login:login' %}" method="post">
-                        <div class="form-group">
-                            <input type="text" name="un" id="un" placeholder=" 用户名">
-                            <input type="password" name="up" id="up" placeholder=" 密码">
-                        </div>
-                        <input type="submit" class="btn btn-default" style="background-color: rgba(0,0,0,0.1);color:white;height:35px;width:55px;"value="登录" >
-                        <button type="submit" class="btn btn-default" style="height:35px;width:55px;font-size:1em";><a href="{% url 'login:register' %}">注册</a></button>
-                     </form>
-                 </div>
-            {% endif %}
+        <div class="profile-view">
+          <ul>
+            <li>
+                {% if request.session.is_login %}
+              <img alt="#" src="/static/assets/extra-images/user-img.jpg">
+              <i class="icon-arrow-down8"></i>
+              <div class="dropdown-area">
+                <h5>{{ request.session.username }}</h5>
+                <ul class="dropdown">
+
+                  <li><a href="{% url 'accounts:donate' %}"><i class="icon-file-text-o"></i>我的捐赠</a></li>
+                  <li><a href="{% url 'accounts:index' %}"><i class="icon-ticket6"></i>我的项目</a></li>
+                  <li><a href="{% url 'projects:start' %}"><i class="icon-plus6"></i>发起新项目</a></li>
+                    <li><a href="{% url 'usermana:start' %}"><i class="icon-pie2"></i>记录志愿活动</a></li>
+                </ul>
+                <a class="sign-btn" href="{% url 'login:logout' %}"><i class="icon-logout"></i>注销</a>
+              </div>
+                {% else %}
+            </li>
+          </ul>
         </div>
+        <a href="{% url 'login:register' %}" class="free-btn">免费开始</a> </div>
     </div>
-</nav>
+    <div class="mob-nav"></div>
+    </div>
+      {% endif %}
+  </header>
     {% block content%}
 
     {% endblock %}
+	<div id="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="footer_icon"><a href="#"><img src="/static/assets/images/footer-logo.png" alt=""></a></div>
+					<div class="fnav-area">
+						<nav class="footer-nav">
+							<ul>
+								<li><a href="{% url 'index:index' %}">首页</a></li>
+								<li><a href="{% url 'projects:show' %}">更多项目</a></li>
+								<li><a href="{% url 'usermana:index' %}">志愿活动</a></li>
+							</ul>
+						</nav>
+						<p>©2014 Box Theme All rights reserved. Design by <a href="http://www.jqueryfuns.com">Chimp Studio</a></p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="social-media">
+						<ul>
+							<li><a href="#"><i class="icon-facebook7"></i></a></li>
+							<li><a href="#"><i class="icon-twitter6"></i></a></li>
+							<li><a href="#"><i class="icon-googleplus7"></i></a></li>
+							<li><a href="#"><i class="icon-instagram4"></i></a></li>
+							<li><a href="#"><i class="icon-youtube-play"></i></a></li>
+							<li><a href="#"><i class="icon-skype"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--// CopyRight //-->
+
+</div>
+<script src="/static/assets/scripts/jquery.js"></script>
+<script src="/static/assets/scripts/bootstrap.min.js"></script>
+<script src="/static/assets/scripts/modernizr.js"></script>
+<script src="/static/assets/scripts/menu.js"></script>
+<script src="/static/assets/scripts/jquery.flexslider-min.js"></script>
+<script src="/static/assets/scripts/functions.js"></script>
+<script >
+	jQuery(window).load(function(){
+		jQuery('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			prevText:"<em class='icon-arrow-left10'></em>",
+			nextText:"<em class='icon-arrow-right10'></em>",
+			start: function(slider){
+				jQuery('body').removeClass('loading');
+			}
+		});
+	});
+</script>
 </body>
 </html>

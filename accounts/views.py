@@ -33,6 +33,7 @@ def index(request):
         a = account.objects.get(ac_users = U)
         msg = {}
         msg['coins'] = a.ac_coins
+        msg['address'] = U.address
         # 我的项目 帮助过我的人 我的捐赠记录
         try:
             p = projects.objects.get(pjts_users = U)
@@ -72,6 +73,51 @@ def index(request):
                      msg['bill_list'] = i
                      return render(request, 'accounts/index.html', msg)
 
+
+def donate(request):
+    U = Users.objects.get(phone_number=request.session['username'])
+    a = account.objects.get(ac_users=U)
+    msg = {}
+    msg['coins'] = a.ac_coins
+    msg['address'] = U.address
+    # 我的项目 帮助过我的人 我的捐赠记录
+    try:
+        p = projects.objects.get(pjts_users=U)
+    except projects.DoesNotExist:
+        msg['my_project'] = False
+        msg['helper_list'] = False
+        try:
+            i = investbill.objects.filter(iv_from=U)
+        except investbill.DoesNotExist:
+            msg['bill_list'] = False
+            return render(request, 'accounts/donate.html', msg)
+        else:
+            msg['bill_list'] = i
+            return render(request, 'accounts/donate.html', msg)
+    else:
+        msg['my_project'] = p
+        try:
+            helper = investbill.objects.filter(iv_to=p)
+        except investbill.DoesNotExist:
+            msg['helper_list'] = False
+            try:
+                i = investbill.objects.filter(iv_from=U)
+            except investbill.DoesNotExist:
+                msg['bill_list'] = False
+                return render(request, 'accounts/donate.html', msg)
+            else:
+                msg['bill_list'] = i
+                return render(request, 'accounts/donate.html', msg)
+        else:
+            msg['helper_list'] = helper
+            try:
+                i = investbill.objects.filter(iv_from=U)
+            except investbill.DoesNotExist:
+                msg['bill_list'] = False
+                return render(request, 'accounts/donate.html', msg)
+            else:
+                msg['bill_list'] = i
+                return render(request, 'accounts/donate.html', msg)
 
 def settle(request):
     c = zerorpc.Client()

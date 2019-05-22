@@ -1,76 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>start your projects</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>开始您的项目</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
-    </style>
-    <script>
-        function test()
-        {
-            window.open("/logout");
-        }
-    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记录志愿活动</title>
+
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div style="background-color:  rgba(255,255,255,0.75);width: 1200px;padding: 25px;margin: 75px;">从这里开始记录您的志愿项目
-    <form role="form" style="margin-bottom: 10px" action="{% url 'usermana:start' %}" method="post">
-        <div class="form-group">
-            <label for="name">名称</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="请输入名称">
-        </div>
-        <div class="form-group">
-            <label for="name">活动描述</label>
-            <textarea type="text" class="form-control"   id="detail" name="detail" placeholder="请输入您的活动描述，尽量详细" style="height: 200px;"></textarea>
-        </div>
-         <input type="submit" class="btn btn-default now" style="background-color: rgba(255,255,255,1);height:35px;width:55px;"value="提交" >
-    </form>
-注意：所有志愿活动将公示
-</div>
+<main id="main-content">
+		<div class="main-section">
+			<div class="page-section">
+				<div class="profile-pages">
+					<div class="container">
+						<div class="row">
+							<div class="section-fullwidth col-lg-12">
+								<div class="cs-content-holder">
+									<div class="row">
+										<div class="cause-holder">
+											<div class="col-lg-12">
+												<div class="cs-auther">
+													<figure>
+														<a href="#"><img src="/static/assets/extra-images/auther1.jpg" alt="#"></a>
+													</figure>
+													<div class="text">
+														<h3>{{ request.session.username }}</h3>
+													</div>
+												</div>
+												<div class="right-sec">
+													<ul class="cs-donations">
+                                                        <li>
+															<span>账户余额</span>
+															<strong>{{ coins }}币</strong>
+                                                        </li>
+
+														<li>
+															<span>区块链地址</span>
+															<strong>{{ address }}</strong>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-lg-12">
+												<div class="profile-block">
+													<ul class="scroll-nav">
+													<li class="active"><a href="{% url 'usermana:start' %}"><i class="icon-star-o"></i>创建志愿活动</a></li>
+															<li><a href="{% url 'projects:start' %}"><i class="icon-star-o"></i>创建新项目</a></li>
+
+															<li><a href="{% url 'accounts:donate' %}"><i class="icon-money"></i>我的捐赠</a></li>
+															<li><a href="{% url 'accounts:index' %}"><i class="icon-gear"></i>我的项目</a></li>
+
+															<li><a href="{% url 'login:logout' %}"><i class="icon-sign-in"></i>注销</a></li>
+														</ul>
+													<form action="{% url 'usermana:start' %}" method="post">
+														<div class="cs-profile-area">
+															<div class="cs-title no-border">
+																<h3>创建志愿活动</h3>
+															</div>
+															<div class="cs-profile-holder">
+																<div class="gallery-area">
+																	<ul class="cs-element-list has-border wout-label">
+																	</ul>
+																</div>
+																<ul class="cs-element-list has-border">
+																	<li>
+																		<label>活动名称</label>
+																		<div class="fields-area">
+																			<div class="field-col col-md-12">
+																				<input type="text" id="name" name="name">
+																				<span class="char-remain">请简明地说明您的情况。</span>
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<label>活动细节</label>
+																		<div class="fields-area">
+																			<div class="field-col col-md-12">
+																				<textarea type="text" id="detail" name="detail"></textarea>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<ul class="cs-element-list has-border">
+																<li>
+																		<label>注意事项 &amp;<br> 条款</label>
+																		<div class="fields-area">
+																			<div class="field-col col-md-12">
+																				<p>所有志愿活动信息将被公示</p>
+																				<div class="checkbox-area">
+																					<input type="checkbox" id="conditions">
+																					<label for="conditions">接受<a href="#">服务条款</a></label>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+
+																<ul class="cs-element-list cs-submit-form">
+																	<li>
+																		<div class="fields-area">
+																			<div class="field-col col-md-4">
+																				<input class="csbg-color cs-btn" type="submit" value="提交">
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 {% endblock %}
 </body>
 </html>

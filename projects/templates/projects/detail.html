@@ -8,71 +8,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>start your projects</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>login</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
-    </style>
+
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div style="background-color:  rgba(255,255,255,0.75);width: 1200px;padding: 25px;margin: 75px;">
-    项目名称：{{ projects.pjts_name }}<br>
-    项目描述：{{ projects.pjts_detail }} <br>
-    项目发起人：{{ projects.pjts_users.phone_number }} <br>
-    项目目标筹款额：{{ projects.pjts_coins }}<br>
-    现在已有的币数：{{ projects.pjts_nowcoins }}<br>
-    开始日期： {{ projects.pjts_time|date:"Y-m-d H:i:s" }}<br>
-    项目状态：
-    {% if projects.pjts_now %}
-        <button type="button" class="btn btn-info navbar-btn" style="font-size:1em"><a href="{% url 'invest:invest' projects.id %}">帮助他们 </a></button>
-    {% else %}
-        此项目已经结束
-    {% endif %}
+	<main id="main-content">
+		<div class="main-section">
+			<section class="page-section contribute-sec" style="background:#f8f8f8;">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth col-lg-12">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="post-detail">
+										<div class="main-heading col-lg-12">
+											<h1>{{ projects.pjts_name }}</h1>
+										</div>
+										<div class="cause-detail">
+											<div class="col-lg-9">
+												<figure><img src="/static/assets/extra-images/detail-img.jpg" alt=""></figure>
+											</div>
+											<div class="col-lg-3 col-md-3 col-sm-6">
+												<div class="price-area">
+													<span class="price-raised">已筹 <span>{{ projects.pjts_nowcoins|floatformat }}</span>币</span>
+													<span class="price-goal">目标 {{ projects.pjts_coins|floatformat }}币</span>
+												</div>
+                                                {% widthratio projects.pjts_nowcoins projects.pjts_coins 100 as width %}
+												<span class="bar"><span style="width:{{ width }}%;"></span></span>
+												<span class="fund">进度 {{ width }}%</span>
+												{% if projects.pjts_now %}
+												<a href="{% url 'invest:invest' projects.id %}" class="cs-btn"><span>帮助Ta</span></a>
+												{% else %}
+												<a class="cs-fav-btn"><span>该项目已结束</span></a>
+												{% endif %}
+												<div class="detail-list">
+													<ul>
+														<li><i class="icon-clock7 cscolor"></i>开始日期 {{ projects.pjts_time|date:"Y-m-d" }}</li>
+													</ul>
+													<div class="user-info">
+														<figure><img alt="" src="/static/assets/extra-images/img-testi.png" draggable="false"></figure>
+														<span class="cs-author">
+															<span>发起人 </span>
+															{{ projects.pjts_users.phone_number }}
+														</span>
+													</div>
+												</div>
+												<ul class="share-opts">
+													<li>
+														<i class="icon-share2"></i>
+														<a href="#">Share</a>
+													</li>
+													<li>
+														<i class="icon-star"></i>
+														<a href="#">Save</a>
+													</li>
+													<li>
+														<i class="icon-warning4"></i>
+														<a href="#">Report</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-section tab-sec">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth col-lg-12">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="page-content col-lg-9">
+										<div class="post-sec">
+											<div class="row">
+												<div class="col-lg-12">
+												<div class="detail-tabs">
 
-</div>
+												  <!-- Nav tabs -->
+												  <ul class="nav nav-tabs" role="tablist">
+													<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">项目描述</a></li>
+													<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">捐献者</a></li>
+
+
+												  <!-- Tab panes -->
+												  <div class="tab-content">
+
+													<div role="tabpanel" class="tab-pane active" id="home">
+														<div class="post-block summary-sec rich_editor_text">
+															<h2>项目描述</h2>
+															<p>{{ projects.pjts_detail }}</p>
+														</div>
+													</div>
+
+													<div role="tabpanel" class="tab-pane" id="profile">
+														<div class="post-block contribution-sec">
+															<h2>捐赠者</h2>
+
+															<div class="contributor-list">
+
+																<article class="col-md-12">
+																	<span class="number">01</span>
+																	<figure>
+																		<a href="#"><img alt="#" src="/static/assets/extra-images/pic.png"></a>
+																	</figure>
+																	<div class="text">
+																		<h4><a href="#">James Warsom</a></h4>
+																		<span>Newyork</span>
+																	</div>
+																	<div class="time-sec">
+																		<time datetime="2013-02-14">September 3, 2015, 08:55pm</time>
+																	</div>
+																	<span class="amount">$2,000.00</span>
+																</article>
+
+															</div>
+
+														</div>
+												    </div>
+
+												      </div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
 {% endblock %}
 </body>
 

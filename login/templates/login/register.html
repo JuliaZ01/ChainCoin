@@ -1,90 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>注册</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登陆注册</title>
 
-    </style>
-    <script>
-function validate() {
-var user_password = document.getElementById("user_password").value;
-var user_password2 = document.getElementById("user_password2").value;
-if(user_password == user_password2) {
-document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
-document.getElementById("submit").disabled = false;
-}
-else {
-document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
-document.getElementById("submit").disabled = true;
-}
-}
-    </script>
+<!-- Css (necessary Css) -->
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div style="background-color:  rgba(255,255,255,0.75);width: 400px;padding: 25px;margin: 75px auto
-;
-">
-    <form role="form" style="margin-bottom: 10px" action="{% url 'login:register' %}" method="post">
-        <div class="form-group">
-            <label for="name">用户名</label>
-            <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="请输入用户名">
+	<div style="background:url(/static/assets/images/bg-signup.jpg) no-repeat; background-size:100% auto; min-height:157px!important;" class="breadcrumb-sec">
+		<div class="absolute-sec">
+			<div class="container">
+				<div class="cs-table">
+					<div class="cs-tablerow">
+						<div class="pageinfo page-title-align-center">
+							<h1 style="color:#fff !important; text-transform:none; text-align:center;">登陆或注册</h1>
+							<strong class="title" style="text-align:center; display:block; color:#fff; font-weight:normal;">首次注册的用户将为您自动生成区块链地址和公私钥并保存</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        <!-- Main Start -->
+        <div id="main">
+            <section class="page-section">
+               <div class="container">
+                <div class="row">
+					<div class="section-fullwidth">
+					  <div class="cs-content-holder">
+						  <div class="row">
+						  <div class="col-lg-12">
+							<div class="user-signup">
+							  <!-- Nav tabs -->
+								  <ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">登陆</a></li>
+									<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">注册</a></li>
+								  </ul>
+
+								  <!-- Tab panes -->
+								  <div class="tab-content">
+									<div role="tabpanel" class="tab-pane active" id="home">
+									  <div class="sign-form">
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-sm-6">
+											 <form class="signup-form" action="{% url 'login:login' %}" method="post">
+												<ul class="row">
+												  <li class="col-lg-6 col-md-6 col-sm-6">
+													<label>用户名</label>
+													<input type="text" placeholder="" name="un" id="un">
+												  </li>
+												  <li class="col-lg-6 col-md-6 col-sm-6">
+													<label>密码</label>
+													<input type="password" placeholder="" name="up" id="up">
+												  </li>
+												  <li class="col-lg-12">
+													<a href="#"><i class="icon-question-circle"></i>忘记密码?</a>
+												  </li>
+												  <li class="col-lg-12">
+													<input class="cs-bgcolor" type="submit" value="登陆">
+												  </li>
+												</ul>
+											 </form>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6">
+											 <div class="social-network">
+												<div class="row">
+												 <div class="col-lg-12">
+												 <h3>使用其他账户登陆</h3></div>
+												 <ul class="row">
+													<li class="col-lg-12">
+													<a href="https://www.facebook.com/" data-original-title="facebook">
+													<i class="icon-facebook-square"></i>
+													  使用Facebook登陆
+													</a>
+													</li>
+													<li class="col-lg-12">
+													<a href="https://twitter.com" data-original-title="Twitter">
+													<i class="icon-twitter2"></i>
+													使用Twitter登陆
+													</a>
+													</li>
+													<li class="col-lg-12">
+													  <a href="https://accounts.google.com" data-original-title="Google">
+													  <i class="icon-google-plus"></i>
+													  使用Google登陆
+													  </a>
+													</li>
+												 </ul>
+											   </div>
+											 </div>
+											</div>
+										</div>
+									  </div>
+									</div>
+									<div role="tabpanel" class="tab-pane" id="profile">
+									  <div class="sign-form">
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-sm-6">
+											 <form class="signup-form" action="{% url 'login:register' %}" method="post">
+												<ul class="row">
+												  <li class="col-lg-6 col-md-6 col-sm-6">
+													<label>用户名</label>
+													<input type="text" placeholder="" id="phone_number" name="phone_number">
+												  </li>
+												  <li class="col-lg-6 col-md-6 col-sm-6">
+													<label>密码</label>
+													<input type="password" placeholder="" id="user_password" name="user_password">
+												  </li>
+												  </li>
+												   <li class="col-lg-12">
+													<label>确认密码</label>
+													<input type="password" placeholder="" id="user_password" name="user_password">
+												  </li>
+												  <li class="col-lg-12">
+													<input class="cs-bgcolor" type="submit" value="注册用户">
+												  </li>
+												</ul>
+											 </form>
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6">
+											 <div class="social-network">
+												<div class="row">
+												 <div class="col-lg-12"><h3>使用其他账户登陆</h3></div>
+												 <ul class="row">
+													<li class="col-lg-12">
+													<a href="#" data-original-title="facebook">
+													<i class="icon-facebook-square"></i>
+													  使用Facebook登陆
+													</a>
+													</li>
+													<li class="col-lg-12">
+													<a href="#" data-original-title="Twitter">
+													<i class="icon-twitter2"></i>
+													  使用Twitter登陆
+													</a>
+													</li>
+													<li class="col-lg-12">
+													  <a href="#" data-original-title="Google">
+													  <i class="icon-google-plus"></i>
+													  使用Google登陆
+													  </a>
+													</li>
+												 </ul>
+											   </div>
+											 </div>
+											</div>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								</div>
+							</div>
+						  </div>
+					  </div>
+					</div>
+                  </div>
+                </div>
+            </section>
         </div>
-        <div class="form-group">
-            <label for="name">密码</label>
-            <input type="password" class="form-control" id="user_password" name="user_password" placeholder="请输入您的密码">
-        </div>
-        <div class="form-group">
-            <label for="name">确认密码</label>
-            <input onkeyup="validate()" type="password" class="form-control" id="user_password2" name="user_password2" placeholder="请确认您的密码"><span id="tishi"></span>
-        </div>
-         <input type="submit" class="form-control" style="background-color: cornflowerblue;"value="注册" >
-    </form>
-          我们将自动为您生成区块链地址以及公私钥并为您保管
-</div>
 {% endblock %}
 </body>
 </html>

@@ -8,76 +8,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>start your projects</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <title>login</title>
-    <style>
-        body{
-    background-image:url("/static/sky.jpg");
-    background-position: center 0;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    }
-        p.center
-        {
-            text-align: center;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-size:3em;
-        }
-        button.btn-default.now{
-            background-color: rgba(0,0,0,0.1);
-            font-size:0.5em;
-            color:white;
-        }
-        button.btn-default.now:hover{
-            background-color: rgba(0,0,0,0.1);
-        }
-        a:link {color:white;}    /* 未被访问的链接 */
-        a:visited {color:white;} /* 已被访问的链接 */
-        a:hover {color:white;text-decoration:none;}   /* 鼠标指针移动到链接上 */
-        a:active {color:darkblue;}  /* 正在被点击的链接 */
-    </style>
-    <script>
-        function test()
-        {
-            window.open("/logout");
-        }
-    </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>跟投项目</title>
+
+<link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="/static/assets/css/language-selector-remove-able-css.css" rel="stylesheet">
+<link href="/static/assets/css/flexslider.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link href="/static/plugin.css" rel="stylesheet">
+<link href="/static/assets/css/menu.css" rel="stylesheet">
+<link href="/static/assets/css/responsive.css" rel="stylesheet">
+<link href="/static/assets/css/color.css" rel="stylesheet">
+<link href="/static/assets/css/iconmoon.css" rel="stylesheet">
+<link href="/static/assets/css/themetypo.css" rel="stylesheet">
+<link href="/static/assets/css/widget.css" rel="stylesheet">
 </head>
 <body>
 {% extends 'Base.html' %}
 {% block content%}
-<div style="background-color:  rgba(255,255,255,0.75);width: 1200px;padding: 25px;margin: 75px;">
-    感谢您的帮助！众人拾柴火焰高！
-    <form role="form" style="margin-top:10px;margin-bottom: 10px" method="post" action="{% url 'invest:start' %}">
-        <div class="form-group">
-            <label for="name">帮助金额</label>
-            <input type="text" class="form-control" style="width:50px" id="coins" name="coins">
-        </div>
-        <div class="form-group">
-            <label for="name">附言</label>
-            <textarea type="text" class="form-control"   id="ps" name="ps" style="height: 100px;"></textarea>
-        </div>
-         <input type="submit"  class="btn btn-default now" style="background-color: rgba(255,255,255,1);height:35px;width:55px;"value="提交" >
-    </form>
-</div>
+	<div class="breadcrumb-sec donate-sec" style="background: url(/static/assets/extra-images/bg-counter.jpg) no-repeat; background-size:100% auto; min-height:250px;">
+		<div class="absolute-sec">
+			<div class="container">
+				<div class="cs-table">
+					<div class="cs-tablerow">
+						<div class="pageinfo page-title-align-left">
+							<h1 style="color:#fff !important; text-transform:none;">捐赠项目</h1>
+							<strong style="text-align:center; display:block; color:#fff; font-weight:normal;" class="title">予人玫瑰，手有余香</strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main Content -->
+	<main id="main-content">
+		<div class="main-section" style="padding:0;">
+			<section class="page-section bg-donate">
+				<div class="container">
+					<div class="row">
+						<div class="section-fullwidth">
+							<div class="cs-content-holder">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="donate-area">
+											<ul class="nav nav-tabs" role="tablist">
+												<li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#home">填写相关信息</a></li>
+											</ul>
+											<div class="tab-content">
+												<div id="home" class="tab-pane active fade in" role="tabpanel">
+													<div class="donate-holder">
+
+														<h3>输入金额</h3>
+														<div class="form-area">
+															<form  method="post" action="{% url 'invest:start' %}">
+																<div class="input-area"  >
+																	<span>$</span>
+																	<input type="text" id="coins" name="coins" placeholder="">
+																</div>
+
+														</div>
+														<h3>附言</h3>
+														<div class="form-area" >
+																	<textarea type="text" style= "width: 100%;height: 100px;color:#000000;" placeholder="" id="ps" name="ps" ></textarea>
+
+														</div>
+														<div class="cs-holder">
+															<input type="submit" value="确认">
+														</div>
+															</form>
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
 {% endblock %}
 </body>
 </html>

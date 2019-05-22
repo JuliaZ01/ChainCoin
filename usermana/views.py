@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Volunteer
-from login.models import Users
+from login.models import Users,account
 import zerorpc
 from urllib.parse import unquote,quote
 def index(request):
@@ -36,18 +36,34 @@ def start(request):
                 except ValueError:
                     return render(request, 'index/message.html', {'msg': "信息未填写或者格式错误"})
                 else:
+                    a = account.objects.get(ac_users=U)
+                    msg = {}
+                    msg['coins'] = a.ac_coins
                     users = U.address
                     prkey = U.private_key
                     c = zerorpc.Client()
                     c.connect("tcp://127.0.0.1:4343")
                     hash1 = c.addVolunteer(users, prkey, quote(request.POST['name'], 'utf-8'), quote(request.POST['detail'], 'utf-8'))
+                    msg['adr'] = U.address
                     if type(hash1) == type('abc'):
                         v.save()
-                        return render(request, 'index/message.html', {'msg': "您的志愿信息已经提交"})
+                        msg['msg'] = "您的志愿信息已经提交."
+                        return render(request, 'index/message.html', msg)
                     else:
-                        return render(request, 'index/message.html', {'msg': "提交失败，请联系管理员。"})
+                        msg['msg'] = "提交失败，请联系管理员。"
+                        return render(request, 'index/message.html', msg)
     else:
-        return render(request,'usermana/start.html')
+        try:
+            U = Users.objects.get(phone_number=request.session['username'])
+        except KeyError:
+            return render(request, 'index/message.html', {'msg': "用户未登录，请登录后再进行操作"})
+        else:
+             a = account.objects.get(ac_users=U)
+             msg = {}
+             msg['coins'] = a.ac_coins
+             msg['address'] = users = U.address
+             return render(request, 'usermana/start.html',msg)
+
 
 def scharge(request):
     return render(request,'usermana/servicecharge.html')

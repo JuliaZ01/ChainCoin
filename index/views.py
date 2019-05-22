@@ -7,3 +7,4 @@ def index(request):
 
 def aboutus(request):
     return render(request, 'index/aboutus.html')
+

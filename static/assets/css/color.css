@@ -1,0 +1,30 @@
+﻿/* ThemeColor Setup */
+
+.cscolor,.cs-hovercolor:hover,
+/* Cs Blog */.cs-blog article:hover h2 a, .blog-editor .cs-tags ul li a:hover, .cs-post-sharebtn article time a, .cs-post-sharebtn article .post-np i, .comment-reply, 
+/* widget */.widget_categories ul li:hover a, .widget_categories ul li:hover a, .widget_meta ul li:hover a, .widget_archive ul li:hover a, .widget_nav_menu ul li a:hover, .widget_nav_menu ul li a:hover i, .widget_categories ul li:hover:before, .widget-recent-blog article .text ul li a,
+.widget_recent_entries ul li:hover a, .widget_pages ul li a:hover, .cs_directory_categories ul li:hover a, 
+.donation-collected .accordion-heading a:before, .agentdetail-info .social-media li a:hover i, .cs-tabs .nav-tabs > li.active > a, .under-text h2, .under-text .digit-wrapp, .cs-result.relevent .cs-description a, .sign-btn, .user-signup .signup-form ul li a i, .detail-tabs .nav-tabs > li.active a, .freq-sec .panel-title a i, .cs-timeline article time, .cause-detail .share-opts li:hover a, .cause-detail .share-opts li:hover i{
+	color: #fe6500 !important;
+}
+.cs-bgcolor,.csbg-color,.csbg-hovercolor:hover,
+/* Cs Blog */.cs-blog .flex-direction-nav a:hover, .cs-blog .flex-control-paging li a.flex-active, .blog-editor .flex-control-paging li a.flex-active, .cs-blog .flex-control-paging li:hover a, .blog-editor .cs-tags i, .Continue-Readingbtn:hover,
+/* widget */.widget_calendar caption, .widget_search form label input[type="submit"], .tagcloud a:hover, .cs-form-element input[type="submit"], .icon-input a, .cs_directory_categories ul li:hover span, .contact-form li input[type="submit"], .contect-btn, .call-actions .btn-area a, .cs-price-table.cs-featured a, .cs-services .service-number span, .skills-sec .skillbar-bar, .cs-result.relevent .cs-description p:before, .widget_categories ul li:hover span, .qustion-area a, .cs-timeline .timiline-title h4, .author-info .heading-sec span,
+#main-header .slicknav_nav {
+	background-color: #fe6500 !important;
+}
+
+.csborder-color,.csborder-hovercolor:hover,
+/* Cs Blog */.flex-control-paging li:hover, .comment-reply, .cs-timeline article time, .cs-timeline .text-box:before, .user-detail2 .detail-tabs .nav-tabs li.active a {
+	border-color: #fe6500 !important;
+}
+
+
+/* Header Color */
+
+.top-bar a { color: #cccccc !important; }
+#footer-sec i{ color:#55acee; }
+#footer-sec strong,#footer-sec h1,#footer-sec h2,#footer-sec h3,#footer-sec h4,#footer-sec h5,#footer-sec h6 { color: #ffffff; }
+.Continue-Readingbtn:hover{
+	color: #fff !important; 
+}
