@@ -10,4 +10,4 @@ Charity organizations can raise funds for charity processes such as project prog
 ### Description
 Utilized blockchain + MySQL as the underlying storage solution and browser/server model for business processing applications, which support donation, recharge, cash withdrawal, and flow of funds check, etc
 
-### Test Video(with English subtitles)
+### Test Video
