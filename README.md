@@ -1,6 +1,6 @@
 # ChainCoin
-基于区块链的大病筹款系统
 ChainDonation——a donation platform based on blockchain.
+基于区块链的大病筹款系统
 
 ### Intuition
 The application of blockchain technology in the field of charity can reduce costs, increase transparency, and enhance trust. 
